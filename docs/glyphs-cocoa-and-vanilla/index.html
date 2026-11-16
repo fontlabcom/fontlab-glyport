@@ -1,0 +1,1274 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Glyport public contracts and complete maintained guides.">
+      
+      
+      
+        <link rel="canonical" href="https://fontlabcom.github.io/fontlab-glyport/glyphs-cocoa-and-vanilla/">
+      
+      
+        <link rel="prev" href="../installation/">
+      
+      
+        <link rel="next" href="../development-and-limits/">
+      
+      
+        
+      
+      
+      
+      
+        
+        
+        
+          <link rel="icon" href="../assets/images/favicon.png">
+        
+      
+      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-materialx-10.1.8">
+    
+    
+      
+        <title>Glyphs Cocoa And Vanilla - Glyport</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.314bbef5.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a45159b5.min.css">
+      
+    
+    
+
+    
+
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/local.css">
+    
+      <link rel="stylesheet" href="https://i.fontlab.com/fltheme26/1.0.0/components.css">
+    
+      <link rel="stylesheet" href="https://i.fontlab.com/fltheme26/1.0.0/theme.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+  <script src="https://i.fontlab.com/menu/fontlab.js" defer></script>
+
+  </head>
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" data-mx-topbar="glass">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="toc" type="checkbox" id="__toc" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__toc"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#glyphs-cocoa-and-vanilla" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+  <fontlab-menu mode="light" site-label="Glyport"
+                site-url="https://fontlabcom.github.io/fontlab-glyport/"
+                mobile-menu="materialx" mobile-search="materialx"></fontlab-menu>
+  
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Glyport" class="md-header__button md-logo" aria-label="Glyport" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Glyport
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Glyphs Cocoa And Vanilla
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.25 2a8.25 8.25 0 0 1 6.34 13.53l5.69 5.69a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-5.69-5.69A8.25 8.25 0 1 1 10.25 2M3.5 10.25a6.75 6.75 0 1 0 13.5 0 6.75 6.75 0 0 0-13.5 0"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.25 2a8.25 8.25 0 0 1 6.34 13.53l5.69 5.69a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-5.69-5.69A8.25 8.25 0 1 1 10.25 2M3.5 10.25a6.75 6.75 0 1 0 13.5 0 6.75 6.75 0 0 0-13.5 0"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/fontlabcom/fontlab-glyport" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    fontlabcom/fontlab-glyport
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Glyport" class="md-nav__button md-logo" aria-label="Glyport" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Glyport
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/fontlabcom/fontlab-glyport" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    fontlabcom/fontlab-glyport
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glyphs Cocoa And Vanilla
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glyphs Cocoa And Vanilla
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc">
+      
+        <li class="md-nav__item">
+  <a href="#ordinary-glyphs-imports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ordinary Glyphs imports
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-model-additions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public model additions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cocoa-backend-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cocoa backend selection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vanilla-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vanilla session
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inspect-and-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inspect and run
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compatibility-limits-and-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compatibility limits and evidence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-app-mechanics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shared App mechanics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module map
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../development-and-limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Development And Limits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../licence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Licence
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Complete maintained guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Complete maintained guides
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/COMPATIBILITY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    COMPATIBILITY
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/GLYPH_INFO_MANAGER/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GLYPH_INFO_MANAGER
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/LAYER_IDENTITIES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LAYER_IDENTITIES
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/arabic-presentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    arabic-presentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/custom-parameters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    custom-parameters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/glyph-descriptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    glyph-descriptions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/legacy-and-ros/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    legacy-and-ros
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/production-metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    production-metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/unicode-lookup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    unicode-lookup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc">
+      
+        <li class="md-nav__item">
+  <a href="#ordinary-glyphs-imports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ordinary Glyphs imports
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-model-additions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public model additions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cocoa-backend-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cocoa backend selection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vanilla-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vanilla session
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inspect-and-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inspect and run
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compatibility-limits-and-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compatibility limits and evidence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-app-mechanics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shared App mechanics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module map
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+  
+
+
+<h1 id="glyphs-cocoa-and-vanilla">Glyphs, Cocoa and Vanilla</h1>
+<p>User-facing examples require <code>fontlab-fly&gt;=1.3.0</code> alongside Glyport and its declared dependencies. Fly shares the canonical provider modules; Glyport library code keeps direct imports to avoid a dependency cycle.</p>
+<h2 id="ordinary-glyphs-imports">Ordinary Glyphs imports</h2>
+<p>Direct public imports expose the same 111 facade exports. Importing the package is lazy; first access builds one FontLab GUI-thread session (<code>glyphs4</code>). If using both entry points, call <code>activate()</code> first to share its exact objects; activation after an independent public binding is refused until <code>gp.GlyphsApp.unbind()</code> releases it. <code>dir(gp.GlyphsApp)</code> lists exports without binding a host. Through Fly, use <code>from fly import gp; gp.GlyphsApp.Glyphs</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fly.gp.GlyphsApp</span><span class="w"> </span><span class="kn">import</span> <span class="n">Glyphs</span><span class="p">,</span> <span class="n">GSPath</span><span class="p">,</span> <span class="n">GSNode</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fly.gp.GlyphsApp.plugins</span><span class="w"> </span><span class="kn">import</span> <span class="n">GeneralPlugin</span>
+<span class="n">layer</span> <span class="o">=</span> <span class="n">Glyphs</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">selectedLayers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">layer</span><span class="o">.</span><span class="n">beginChanges</span><span class="p">()</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">layer</span><span class="o">.</span><span class="n">decomposeComponents</span><span class="p">()</span>
+    <span class="n">layer</span><span class="o">.</span><span class="n">correctPathDirection</span><span class="p">()</span>
+    <span class="n">layer</span><span class="o">.</span><span class="n">addNodesAtExtremes</span><span class="p">()</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="n">layer</span><span class="o">.</span><span class="n">endChanges</span><span class="p">()</span>
+</code></pre></div>
+<p>Outside FontLab, call <code>import fly.gp.GlyphsApp as gs; gs.use_backend(backend, profile="glyphs4")</code> before accessing exports (tests use <code>FakeBackend</code> from <code>fontlab_glyport.model.fake_backend</code>). Otherwise access raises <code>HostUnavailable</code>. Binding cannot replace a live session. Offline plugin exports are base classes; install via <code>install_plugin()</code> to supply their environment. <code>gs.unbind()</code> closes and forgets an independent default session/backend; activation handles retain their own cleanup.</p>
+<p>Live layers also support <code>removeOverlap(checkSelection=False)</code> (existing <code>boolean</code> extra), <code>getPen()</code>, <code>getPointPen()</code>, <code>draw(pen)</code> and <code>drawPoints(pointPen)</code>. The pens use existing public/private fontTools; use <code>with layer.getPen() as pen:</code> or call <code>pen.doneDrawing()</code> to finish one Undo step spanning its contours. <code>font.save(path=None, formatVersion=None, makeCopy=False)</code> saves its native document by font ID to <code>.vfj</code>/<code>.vfc</code>; an unsaved font needs a path. Copies retain the original filepath; non-None <code>formatVersion</code> is refused. <code>font.close()</code> refuses unsaved edits unless <code>ignoreChanges=True</code> is explicit. Finish pending Undo groups first. FakeBackend saves first-master UFOs. See <a href="../guides/COMPATIBILITY/#issue-205--direct-public-api-and-live-outlines">public API contracts and limits</a>, including separate native verification requirements.</p>
+<p>On FontLab's GUI thread, put activation after any <code>from __future__</code> statements:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fly</span><span class="w"> </span><span class="kn">import</span> <span class="n">gp</span><span class="p">;</span> <span class="n">gp</span><span class="o">.</span><span class="n">activate</span><span class="p">()</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">GlyphsApp</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">AppKit</span><span class="o">,</span><span class="w"> </span><span class="nn">Foundation</span><span class="o">,</span><span class="w"> </span><span class="nn">vanilla</span>
+</code></pre></div>
+<p>Activation supplies supported globals, including <code>Glyphs</code> and a snapshot <code>Font</code>, to the caller. Use <code>activate(namespace=globals())</code> to select that namespace. Conflicting globals or foreign compatibility modules are refused. The default profile is <code>glyphs4</code>; select <code>profile="glyphs3"</code> or <code>"glyphs2"</code> as needed. These describe compatibility behavior, not full Glyphs support. Retain callbacks/windows while needed, then call <code>gp.deactivate()</code> or <code>handle.close()</code>. Cleanup is idempotent; close every handle before changing the Cocoa backend.</p>
+<h2 id="public-model-additions">Public model additions</h2>
+<p>The facade exports SDK constants (including <code>GSRTL=RTL=2</code>, <code>GSBIDI=BIDI=1</code>,
+<code>MOVE</code> and <code>GSGuideLine</code>). Constants name SDK vocabulary; unsupported operations
+still refuse explicitly. Plugin base classes import outside FontLab without
+binding a backend. See the <a href="../guides/COMPATIBILITY/">support matrix</a>.</p>
+<p><code>GSFont()</code> creates an empty detached in-memory font; fill its masters and glyphs
+and save a first-master UFO. It is never silently registered in FontLab.
+<code>GSFontMaster()</code> creates a detached master accepted by in-memory font storage;
+native master append explicitly refuses creation. Live font/master metadata,
+node types, anchor names and component transforms use guarded writes and one
+nested Undo group. <code>GSPath.reverse()</code> supports live and detached paths.
+<code>layer.selection = [...]</code> and <code>clearSelection()</code> cover nodes, anchors, components
+and guides in memory. Native selection supports nodes/components. Selecting an
+unsupported anchor/guide refuses; clearing or replacing supported selection
+skips those kinds, whose selection state cannot be observed or changed.
+<code>GSInstance.interpolatedFont</code> remains an explicit refusal. The optional SDK audit
+uses <code>GLYPHS_SDK_PATH</code> (SDK root or wrapper file) and skips when it is unset.</p>
+<h2 id="cocoa-backend-selection">Cocoa backend selection</h2>
+<p><code>activate(cocoa_backend="auto")</code> prefers native PyObjC on macOS and Qt on Windows and other platforms. <code>"native"</code> requires macOS and available PyObjC; <code>"qt"</code> forces translation. Handles and execution contexts expose <code>cocoa_backend</code> and <code>cocoa_fallback_reason</code>, including an auto-fallback reason. Scoped <code>run_script</code> and <code>install_plugin</code> accept the same request through <code>ExecutionOptions(cocoa_backend="qt")</code> via <code>options=</code>. Concurrent retained handles must use the same request, even when auto selected Qt. Forced Qt masks preloaded PyObjC modules only for the owned scope and restores them on close. Glyphs models remain FontLab-backed. Vanilla, menu/plugin hooks and drawing bridges remain Qt-backed. Native NSView/NSColor objects are not automatically converted into PythonQt widgets/colors; choose Qt for scripts needing those bridges. Glyport starts no application-wide event loop. Close script-owned native Cocoa windows yourself.</p>
+<h2 id="vanilla-session">Vanilla session</h2>
+<p><code>fontlab_glyport.ui.session.VanillaSession</code> owns the Qt Vanilla and dialogs namespaces and their windows (context manager; <code>close()</code> is idempotent). Importing it loads no PythonQt, Cocoa or Vanilla chain (5 s <code>run_python</code> deadline); the constructor does. Native steps: <code>native-drivers/vanilla_steps.py</code>.</p>
+<h2 id="inspect-and-run">Inspect and run</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fly.gp</span><span class="w"> </span><span class="kn">import</span> <span class="n">run_script</span>
+<span class="k">with</span> <span class="n">run_script</span><span class="p">(</span><span class="s2">"OriginalScript.py"</span><span class="p">,</span> <span class="n">profile</span><span class="o">=</span><span class="s2">"glyphs3"</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+    <span class="n">receipt</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">receipt</span>
+</code></pre></div>
+<p>Run on FontLab's GUI thread; retain a handle for modeless UI, then close it. Inspection reads source/bundles without execution or modification. It records hashes, imports, entrypoints, capabilities and unresolved dependencies. An assessment is not an execution pass.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fly.gp</span><span class="w"> </span><span class="kn">import</span> <span class="n">inspect_source</span>
+<span class="n">assessment</span> <span class="o">=</span> <span class="n">inspect_source</span><span class="p">(</span><span class="s2">"OriginalScript.py"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">assessment</span><span class="o">.</span><span class="n">required_capabilities</span><span class="p">)</span>
+</code></pre></div>
+<p>The <code>glyport inspect</code> CLI accepts a source path and an optional JSON report path.</p>
+<p>The CLI refuses to overwrite an existing report. <code>adapt_source</code> preserves original bytes and writes Python 2 transformations/source maps to an owned cache. It is source adaptation with explicit semantic limits. <code>run_script(path, ...)</code> and <code>install_plugin(bundle, ...)</code> return owned handles with context, receipt and close/unload methods. Execution scopes restore owned imports and output routes; they are cooperative scopes, not security sandboxes. The <a href="../guides/COMPATIBILITY/">compatibility guide</a> describes model operations, receipts, callbacks, Vanilla controls, NIB/XIB loading and plugin protocols. <a href="https://github.com/fontlabcom/fontlab-glyport/blob/1f978bebc144754a369da0c684000479823c9276/native-drivers/README.md">Native drivers</a> document owned-fixture verification.</p>
+<h2 id="compatibility-limits-and-evidence">Compatibility limits and evidence</h2>
+<p>Support is specific to tests, native builds and retained receipts. Native checks exist for selected model, script, Cocoa/Qt and UI workflows; the expanded script/plugin matrix and final release acceptance remain open. Offline tests do not prove native compatibility. Unknown APIs raise typed errors such as <code>UnsupportedCapability</code>; closed-font handles raise <code>StaleNativeObject</code>. Known limits include incomplete NIB/XIB translation, unsupported SelectTool/background painting paths, Qt/native UI mixing, and host-specific Undo/Redo or save/reopen behavior. Direct native writes recheck App history ownership before mutation and publication. Use the matching current Font window for font metadata, master writes, creation, deletion and rename; Undo there. Existing glyph edits keep App's shown-owner and single-current-glyph fallback. A focus refusal retains earlier pending work: return to the matching Font window and retry <code>endChanges()</code>/<code>endUndo()</code>. Earlier edits are not rolled back automatically. Kerning tool history remains separate, with additional metadata/history limits. Read the <a href="../guides/COMPATIBILITY/">model and protocol notes</a> before editing fonts; complete native Undo/Redo and saved/reopened acceptance remains open. Historical counts in that guide are not a current corpus-wide pass rate.</p>
+<h2 id="shared-app-mechanics">Shared App mechanics</h2>
+<p>Glyport needs <code>fontlab-fontlabapp&gt;=1.2.10</code> (one floor; see DEPENDENCIES.md). App owns the generic Qt and FontLab mechanics below; Glyport keeps every Cocoa, Vanilla and Glyphs policy. Native qualification of each row remains separate.</p>
+<table>
+<thead>
+<tr>
+<th>App module</th>
+<th>Purpose</th>
+<th>What stays in Glyport</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>contours.affine</code></td>
+<td>Six-number affine helpers</td>
+<td>Glyphs drawing context</td>
+</tr>
+<tr>
+<td><code>qt.painting.editor</code></td>
+<td>Glyph-editor painter registry, <code>PaintContext</code></td>
+<td>Glyphs phases and the <code>before_native_layer</code> refusal</td>
+</tr>
+<tr>
+<td><code>qt.menus</code></td>
+<td>Owned menu actions, tool windows, deferred teardown</td>
+<td>Glyphs menu names, NSMenuItem sync, Apply/Cancel dialog</td>
+</tr>
+<tr>
+<td><code>qt.colors</code></td>
+<td>Shared Qt colour conversion</td>
+<td>Cocoa and Vanilla colour adapters</td>
+</tr>
+<tr>
+<td><code>qt.safe</code></td>
+<td>GC-safe widget lists; <code>main_window</code>, <code>MainWindowNotFound</code></td>
+<td><code>HostUnavailable</code> mapping, NSApp proxies</td>
+</tr>
+<tr>
+<td><code>core.edit_guards</code></td>
+<td>History ownership, matching Font window and queue disclosure</td>
+<td>Prospective Glyphs owners, retained batches and retry/recovery policy</td>
+</tr>
+<tr>
+<td><code>qt.dialogs</code></td>
+<td>Owned dialog execution, message boxes, file filters</td>
+<td>Answer injection, Glyphs dialog values and errors</td>
+</tr>
+<tr>
+<td><code>core.native_tabs</code></td>
+<td>Native tab sender and activation</td>
+<td>Empty-tab text, source font, capability errors</td>
+</tr>
+<tr>
+<td><code>core.signals.callbacks</code></td>
+<td>Nested callback suppression</td>
+<td>Cocoa/Vanilla callback policy</td>
+</tr>
+<tr>
+<td><code>core.signals.connections</code></td>
+<td>Exact signal/slot tracking and reverse teardown</td>
+<td>Callbacks and owner cleanup</td>
+</tr>
+<tr>
+<td><code>qt.events.key</code></td>
+<td>Handled-key routing</td>
+<td>Foreign keys, values and callbacks</td>
+</tr>
+<tr>
+<td><code>qt.events.resize</code></td>
+<td>Resize forwarding</td>
+<td>Window and view frames</td>
+</tr>
+<tr>
+<td><code>qt.layouts.content</code></td>
+<td>Contents-rectangle fitting</td>
+<td>Box title, style and child relayout</td>
+</tr>
+<tr>
+<td><code>qt.layouts.linear</code></td>
+<td>Required/weak linear layout equations</td>
+<td>Vanilla auto-layout parsing and errors</td>
+</tr>
+<tr>
+<td><code>qt.layouts.stack</code></td>
+<td>Stack distribution arithmetic</td>
+<td>NSStackView orientation, insets, hidden views</td>
+</tr>
+<tr>
+<td><code>qt.images.resources</code></td>
+<td>Image lookup, retina selection, rendering</td>
+<td>NSImage/NSCursor APIs</td>
+</tr>
+<tr>
+<td><code>qt.images.view</code></td>
+<td>Image fitting and QLabel presentation</td>
+<td>NSImage enums, Vanilla image policy</td>
+</tr>
+<tr>
+<td><code>qt.numeric</code></td>
+<td>Integer ranges and proportional setters</td>
+<td>Clamping, ticks, exact values, busy/repaint</td>
+</tr>
+<tr>
+<td><code>qt.properties</code></td>
+<td>Known Qt property reads</td>
+<td>Known property names</td>
+</tr>
+<tr>
+<td><code>qt.choices</code></td>
+<td>Editable-choice setup, commit once</td>
+<td>Callbacks, conversion, lifetime</td>
+</tr>
+<tr>
+<td><code>qt.tables.items</code></td>
+<td>Qt text/checkbox table rows</td>
+<td>Columns, binding, callbacks, quiet scopes</td>
+</tr>
+<tr>
+<td><code>qt.tables.selection</code></td>
+<td>Model-row and table-range selection</td>
+<td>Cocoa/Vanilla bounds, bindings, dispatch</td>
+</tr>
+<tr>
+<td><code>qt.ui_graph</code></td>
+<td>UI node graph and serialization</td>
+<td>Frame parsing and adapters</td>
+</tr>
+</tbody>
+</table>
+<h2 id="module-map">Module map</h2>
+<table>
+<thead>
+<tr>
+<th>Path in <code>src/fontlab_glyport/</code></th>
+<th>Responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bootstrap.py</code>, <code>entrypoints.py</code>, <code>execution.py</code></td>
+<td>Activation, script/plugin handles, owned execution</td>
+</tr>
+<tr>
+<td><code>inspection.py</code>, <code>assessment.py</code>, <code>bundles.py</code>, <code>cli.py</code></td>
+<td>Source/bundle facts and command-line reports</td>
+</tr>
+<tr>
+<td><code>adaptation*.py</code>, <code>_py2.py</code></td>
+<td>Source adaptation, cache identity and source maps</td>
+</tr>
+<tr>
+<td><code>glyphsapp/</code>, <code>model/</code></td>
+<td>Glyphs globals, font proxies, FontLab backend and offline fake backend</td>
+</tr>
+<tr>
+<td><code>ui/</code>, <code>cocoa_backend.py</code>, <code>foundation*.py</code></td>
+<td>Cocoa/Vanilla adapters, NIB/XIB loading, session lifetime</td>
+</tr>
+<tr>
+<td><code>plugins/</code>, <code>drawing/</code>, <code>notifications.py</code></td>
+<td>Plugin registration, menu hooks, painter adapters, callbacks</td>
+</tr>
+<tr>
+<td><code>receipt*.py</code>, <code>_receipt*.py</code></td>
+<td>Execution evidence, validation and native verification</td>
+</tr>
+</tbody>
+</table>
+<p>General UI belongs in <code>fontlabapp</code>; fontParts/UFO code belongs in Fontport. Glyport keeps Glyphs compatibility, including Cocoa/Vanilla emulation. New FontLab scripts use App through Fly (<code>from fly import ap</code>).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+          <div class="md-top" data-md-component="top" hidden>
+  <div class="md-top__center">
+    <button type="button" class="md-top__button md-top__button--main" data-md-action="top">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+      <span>Back to top</span>
+    </button>
+    
+      
+      
+      <label class="md-top__button md-top__side md-top__side--nav" for="__drawer" >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-panel-left" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/></svg>
+      </label>
+    
+    
+      
+      
+      <label class="md-top__button md-top__side md-top__side--toc" for="__toc" >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-panel-right" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M15 3v18"/></svg>
+      </label>
+    
+  </div>
+</div>
+      </main>
+      
+  
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://jaywhj.github.io/mkdocs-materialx/" target="_blank" rel="noopener">
+      MaterialX
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+  <fontlab-footer mode="light"></fontlab-footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "code": null, "features": ["search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "code.collapse": "Collapse", "code.download": "Download", "code.expand": "Expand remaining # lines", "code.select": "Toggle line selection", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fc193f93.min.js"></script>
+      
+        <script src="https://i.fontlab.com/fltheme26/1.0.0/basecoat.js"></script>
+      
+        <script src="https://i.fontlab.com/fltheme26/1.0.0/theme.js"></script>
+      
+    
+  </body>
+</html>

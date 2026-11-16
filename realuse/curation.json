@@ -1,0 +1,682 @@
+{
+ "counts": {
+  "scripts": 45,
+  "plugins": {
+   "GeneralPlugin": 4,
+   "FilterWithoutDialog": 4,
+   "FilterWithDialog": 3,
+   "ReporterPlugin": 5,
+   "PalettePlugin": 3,
+   "SelectTool": 2,
+   "FileFormatPlugin": 2
+  }
+ },
+ "exclude": {},
+ "targets": {
+  "joseppatau--Tipo-Pepel-Scripts/Paths & Nodes/Align/Alignment_PRO.py": {
+   "drive": [
+    {
+     "click": "Align"
+    }
+   ],
+   "prepare": [
+    "counter = layer.paths[1]",
+    "counter.nodes[0].selected = True",
+    "counter.nodes[1].selected = True",
+    "result = [(n.x, n.y, n.selected) for n in counter.nodes]"
+   ],
+   "purpose": "two of the three counter nodes of A/Regular selected; Align with the default Center X option aligns each selected node to the selection centre"
+  },
+  "Reset-Type-Studio--Glyphs-Scripts/Paths/Change Weight.py": {
+   "drive": [
+    {
+     "click": "Apply Offset"
+    }
+   ],
+   "expect": {
+    "change": {
+     "glyphs": [
+      "A"
+     ]
+    }
+   },
+   "classify_if": {
+    "dialog": "Offset Curve filter not found",
+    "reason": "out of scope (existing controller ruling, private-selectors matrix target): needs Glyphs' built-in Offset Curve filter (GlyphsFilterOffsetCurve, compiled into Glyphs); FontLab has no equivalent; the script reports it precisely and changes nothing"
+   }
+  },
+  "morisawausa--Glyphs-Scripts/Italic Bowtie.py": {
+   "drive": [
+    {
+     "click": "Italicize"
+    }
+   ],
+   "prepare": [
+    "font.selectedFontMaster.italicAngle = 10",
+    "result = font.selectedFontMaster.italicAngle"
+   ],
+   "purpose": "Regular gets an italic angle of 10 before the run (the script reads it from the master); Italicize slants A/Regular paths and anchors around half the x-height"
+  },
+  "kylewaynebenson--Glyphs-Scripts/Paths/CreateSlotMachine.py": {
+   "drive": [
+    {
+     "click": "Create Slot Machine"
+    }
+   ],
+   "expect": {
+    "change": "any"
+   }
+  },
+  "mekkablue--Papyrify/Papyrify.py": {
+   "drive": [
+    {
+     "click": "Papyrify"
+    }
+   ],
+   "purpose": "Papyrify needs exactly two masters: the harness removes Bold from the owned plum-var copy (Light, Regular remain), then the script papyrifies A",
+   "prepare": [
+    "package.removeMaster(\"Bold\", True)",
+    "result = [m.name for m in font.masters]"
+   ]
+  },
+  "rsztype--Scripts/MasterTwins.py": {
+   "drive": [
+    {
+     "check": "Selected glyphs only"
+    },
+    {
+     "click": "Apply"
+    }
+   ],
+   "purpose": "copy master Regular into Bold (the defaults: front master into the next), selected glyph A only, everything included"
+  },
+  "harbortype--glyphs-scripts/Paths/Make Block Shadow.py": {
+   "drive": [
+    {
+     "click": "Make Shadow"
+    }
+   ],
+   "expect": {
+    "change": {
+     "glyphs": [
+      "A"
+     ]
+    }
+   }
+  },
+  "loweredcase--glyphs-tools/Drawing/Node Nudger.py": {
+   "drive": [
+    {
+     "popup": 0,
+     "item": "Fixed"
+    },
+    {
+     "edit": 4,
+     "text": "30"
+    },
+    {
+     "edit": 5,
+     "text": "-20"
+    },
+    {
+     "click": "Run 🏁"
+    }
+   ],
+   "purpose": "Fixed mode, X +30 and Y -20: every node of A/Regular moves by (30, -20)"
+  },
+  "diegommaldo--Glyphs-Scripts/Metricas/ChequeMetricas.py": {
+   "drive": [
+    {
+     "click": "Cheque!"
+    }
+   ],
+   "expect": {
+    "change": "none"
+   }
+  },
+  "slobzheninov--Glyphs-Scripts/Align/Align Top.py": {
+   "select_nodes": true,
+   "expect": {
+    "change": {
+     "glyphs": [
+      "A"
+     ]
+    }
+   }
+  },
+  "jenskutilek--Glyphs-Scripts/Layers/Copy Layer to Layer Transform Names.py": {
+   "drive": [
+    {
+     "click": "Copy"
+    }
+   ],
+   "expect": {
+    "change": "any"
+   }
+  },
+  "justanotherfoundry--freemix-glyphsapp/Adopt Background.py": {
+   "select_nodes": true,
+   "prepare": [
+    "bg = layer.background",
+    "for path in layer.paths:",
+    "    moved = path.copy()",
+    "    for node in moved.nodes:",
+    "        node.x = node.x + 10",
+    "        node.y = node.y + 5",
+    "    bg.shapes.append(moved)",
+    "result = len(bg.paths)"
+   ],
+   "purpose": "A/Regular background = its own outline moved by (10, 5); with every node selected each node adopts its background counterpart"
+  },
+  "NaN-xyz--GlyphsApp-Scripts/Angularizzle/Angularizzle.py": {
+   "drive": [
+    {
+     "click": "Process"
+    }
+   ],
+   "expect": {
+    "change": {
+     "glyphs": [
+      "A"
+     ]
+    }
+   }
+  },
+  "guidoferreyra--Glyphs-Scripts/getFromNextFont.py": {
+   "other_fonts": [
+    "cafe"
+   ],
+   "drive": [
+    {
+     "popup": 0,
+     "item": "cafe"
+    },
+    {
+     "popup": 1,
+     "item": "Regular"
+    },
+    {
+     "check": "import Anchors"
+    },
+    {
+     "check": "import Sidebearings"
+    },
+    {
+     "click": "Import"
+    }
+   ],
+   "purpose": "import A anchors and sidebearings from the other open font (cafe) into plum-var A/Regular"
+  },
+  "weiweihuanghuang--wei-glyphs-scripts/Compare Fonts.py": {
+   "other_fonts": [
+    "plum-var"
+   ],
+   "prepare": [
+    "regular = font.glyphs[\"A\"].layers[font.masters[1].id]",
+    "regular.width = regular.width + 10",
+    "node = font.glyphs[\"B\"].layers[font.masters[0].id].paths[0].nodes[0]",
+    "node.x = node.x + 5",
+    "result = (regular.width, node.x)"
+   ],
+   "purpose": "the owned copy differs from the second plum-var copy in A/Regular (width +10) and B/Light (one node +5); the report must find exactly those"
+  },
+  "pedroarilla--glyphs-scripts/Cleaning/Start-from-scratch.py": {
+   "drive": [
+    {
+     "check": "Anchors",
+     "on": true
+    },
+    {
+     "click": "Are you sure? START!"
+    }
+   ],
+   "expect": {
+    "change": {
+     "glyphs": [
+      "A"
+     ],
+     "kinds": [
+      "anchors"
+     ]
+    }
+   },
+   "purpose": "deletes the ticked item kinds from all glyphs; anchors ticked, A has anchors in plum-var"
+  },
+  "Tosche--Glyphs-Scripts/Path/Report Glyphs with Acute Node.py": {
+   "select_nodes": true,
+   "expect": {
+    "change": "none"
+   },
+   "classify_if": {
+    "error": "TypeError",
+    "frame": "Report Glyphs with Acute Node.py:17",
+    "reason": "corpus-defect (controller ruling): calls layer.selection() as a method (Glyphs 2 API); in Glyphs 3 GSLayer.selection is a list property, so the call fails there too"
+   }
+  },
+  "RezaBohloul--RezaBohloul/Edit/Magic Remover.py": {
+   "select_nodes": true,
+   "purpose": "all nodes of A/Regular selected: Magic Remover deletes them on every compatible master, so A loses its paths in Light, Regular and Bold"
+  },
+  "yanone--Yanone-GlyphsApp-Scripts/Spacing/Open glyph in spacing overview.py": {
+   "expect": {
+    "change": "none"
+   }
+  },
+  "m4rc1e--mf-glyphs-scripts/Reports/gposreport.py": {
+   "expect": {
+    "change": "none"
+   },
+   "fixture": "cafe",
+   "purpose": "GPOS mark report over all base x mark anchor pairs; on plum-var (348 anchored layers, 3 masters) it ran past the MCP bridge's 60 s call limit and blocked FontLab for minutes, so it uses cafe (49 anchored layers)",
+   "classify_if": {
+    "error": "TypeError",
+    "frame": "gposreport.py:106",
+    "reason": "corpus-defect (controller ruling 2026-10-16): the report file is opened in text mode (gposreport.py:105) and receives bytes from a helper that returns .encode('utf-8') (gposreport.py:97, written at :106); any Python 3, Glyphs 3/4 included, raises TypeError there"
+   }
+  },
+  "danielgamage--Glyphs-Scripts/Nodes/Align Selected Nodes to Guide Intersections.py": {
+   "select_nodes": true,
+   "prepare": [
+    "from fontlab_glyport.model.proxies import GSGuide",
+    "for position, angle in (((300, 0), 90), ((0, 600), 0)):",
+    "    guide = GSGuide()",
+    "    guide.position = position",
+    "    guide.angle = angle",
+    "    font.selectedFontMaster.guides.append(guide)",
+    "result = [(g.position.x, g.position.y, g.angle) for g in font.selectedFontMaster.guides]"
+   ],
+   "purpose": "Regular gets a vertical guide at x 300 and a horizontal one at y 600 (it already has y 250): every selected node of A moves to the nearest guide intersection"
+  },
+  "Mark2Mark--Glyphsapp-Scripts-Free/Font/Tab - Component Glyphs with Anchors.py": {
+   "expect": {
+    "change": "none",
+    "tab": [
+     "Á"
+    ]
+   }
+  },
+  "Ricard-Garcia--TR-Glyphs-Scripts/Paths/Quadrant mover (UI).py": {
+   "drive": [
+    {
+     "click": "Apply to selected layers"
+    }
+   ],
+   "expect": {
+    "change": {
+     "glyphs": [
+      "A"
+     ]
+    }
+   }
+  },
+  "joseppatau--Tipo-Pepel-Scripts/Creative/Pattern Fill Engine.py": {
+   "drive": [
+    {
+     "edit": "Pattern:",
+     "text": "period"
+    },
+    {
+     "click": "Apply"
+    }
+   ],
+   "purpose": "fill A/Regular with a grid of period glyphs (scale 100, no margins), clipped to the outline of A"
+  },
+  "Reset-Type-Studio--Glyphs-Scripts/Paths/Smart Slant.py": {
+   "drive": [
+    {
+     "click": "Apply to selection"
+    }
+   ],
+   "expect": {
+    "change": {
+     "glyphs": [
+      "A"
+     ]
+    }
+   }
+  },
+  "rsztype--Scripts/Postino.py": {
+   "other_fonts": [
+    "plum-var"
+   ],
+   "drive": [
+    {
+     "click": "Deliver"
+    }
+   ],
+   "prepare": [
+    "regular = font.glyphs[\"A\"].layers[font.masters[1].id]",
+    "for path in regular.paths:",
+    "    for node in path.nodes:",
+    "        node.x = node.x + 15",
+    "regular.width = regular.width + 30",
+    "result = regular.width"
+   ],
+   "purpose": "A/Regular of the owned copy is changed first (nodes +15, width +30); Deliver (defaults: every other font ticked, replace) must copy A master by master into the other open plum-var copy",
+   "quarantine": "crashed FontLab 2026-10-16 07:55 (round 5, F57 CRITICAL: copied glyph attached to the other package, then assignFgGlyphNoBody on save; evidence crash-20261016-0755-postino); re-run only alone after X1 fixes F57; 2026-10-16 08:33 with X1 round 17 (b75ffcf, G1 e3747ca): no crash, but FontLab's package writer then spun in std::string copy under PackageImpl::writeDataBlock (evidence hang-20261016-0833-postino); still quarantined"
+  },
+  "diegommaldo--Glyphs-Scripts/Production/LatinDiacriticsGeneratorPro.py": {
+   "drive": [
+    {
+     "click": "Generate Accented Glyphs"
+    }
+   ],
+   "expect": {
+    "change": "any"
+   }
+  },
+  "slobzheninov--Glyphs-Scripts/Align/Align Bottom.py": {
+   "select_nodes": true,
+   "expect": {
+    "change": {
+     "glyphs": [
+      "A"
+     ]
+    }
+   }
+  },
+  "kylewaynebenson--Glyphs-Scripts/Anchors/MirrorAnchorAcrossMasters.py": {
+   "drive": [
+    {
+     "click": "OK"
+    }
+   ],
+   "select_anchor": "ogonek",
+   "purpose": "select anchor ogonek on A/Regular (its masters disagree on it); OK with the defaults (top/right, relative to shapes) re-places it in Light and Bold at the same offset from their top-right bounds"
+  },
+  "huertatipografica--huertatipografica-scripts/Metrics/Sync metrics in brace layers.py": {
+   "prepare": [
+    "glyph = font.glyphs[\"A\"]",
+    "master = font.selectedFontMaster",
+    "brace = glyph.layers[master.id].copy()",
+    "brace.name = \"{550}\"",
+    "brace.associatedMasterId = master.id",
+    "brace.attributes[\"coordinates\"] = {font.axes[0].axisId: 550}",
+    "glyph.layers.append(brace)",
+    "brace.LSB = brace.LSB + 40",
+    "result = [l.name for l in glyph.layers]"
+   ],
+   "purpose": "A gets a brace layer {550} (weight 550, LSB off by 40) before the run; the script must re-interpolate its sidebearings from Regular (400) and Bold (700) and keep its outline"
+  },
+  "mekkablue--MagicRemove/MagicRemove.glyphsPalette": {
+   "window": "Magic Remover",
+   "select_anchor": "top",
+   "drive": [
+    {
+     "click": null
+    }
+   ],
+   "purpose": "select anchor top on A/Regular, press the palette button: top is removed from every compatible master layer of A"
+  },
+  "naipefoundry--Naipe-Foundry-Glyphs-Scripts/InterpolateSelectedGlyphPairsBySuffix.py": {
+   "tab": "",
+   "prepare": [
+    "variant = font.glyphs[\"A\"].copy()",
+    "variant.name = \"A.ss01\"",
+    "font.glyphs.append(variant)",
+    "variant = font.glyphs[\"A.ss01\"]",
+    "for lay in variant.layers:",
+    "    for path in lay.paths:",
+    "        for node in path.nodes:",
+    "            node.x = node.x + 100",
+    "    for anchor in lay.anchors:",
+    "        anchor.x = anchor.x + 100",
+    "    lay.width = lay.width + 100",
+    "font.selection = [font.glyphs[\"A\"], variant]",
+    "result = [g.name for g in font.selection]"
+   ],
+   "drive": [
+    {
+     "click": "Interpolate"
+    }
+   ],
+   "purpose": "font view with A and a prepared A.ss01 (A moved right by 100, width +100) selected; Interpolate with the defaults (.ss01 -> .ss02, 50%) must create A.ss02 halfway"
+  },
+  "joeygrable94--KernBot.io/KernBot.py": {
+   "drive": [
+    {
+     "click": "+"
+    }
+   ],
+   "purpose": "press the first + (left glyph right sidebearing +4, KernBot mtrcUnit) for the active left glyph on Regular"
+  },
+  "rolandhuse--glyphsscripts/Kerning/stealandadjustmetricsandkerning.py": {
+   "answers": {
+    "alerts": [
+     [
+      "OK",
+      "1"
+     ],
+     [
+      "OK",
+      "2"
+     ],
+     [
+      "OK",
+      "50"
+     ]
+    ]
+   },
+   "purpose": "source master 1 (Light), target 2 (Regular), 50%: A/Regular gets Light sidebearings -5 (weight-class approximation)"
+  },
+  "jpt--font-scripts/Glyphs/Briem curve compensation prep.py": {
+   "prepare": [
+    "font.selectedFontMaster.italicAngle = 10",
+    "result = font.selectedFontMaster.italicAngle"
+   ],
+   "purpose": "Regular gets italic angle 10 first (the script requires one); A gets the two prepared slanted layers"
+  },
+  "jansindl3r--Glyphs-Scripts/glyphs/copyDataFromMaster.py": {
+   "drive": [
+    {
+     "popup": 1,
+     "item": "Bold"
+    },
+    {
+     "check": "Copy Shapes"
+    },
+    {
+     "click": "Copy Data"
+    }
+   ],
+   "purpose": "copy A from master Light (source default) into Bold with shapes: A/Bold = A/Light"
+  },
+  "yintzuyuan--Glyphs_Scripts/StrokeAttributesDialog.py": {
+   "drive": [
+    {
+     "click": "新增"
+    }
+   ],
+   "purpose": "add stroke attributes (width 10, the default) to every path of A on the current master"
+  },
+  "HugoJourdan--Glyphs-Script/Export/Export Trial Version.py": {
+   "drive": [
+    {
+     "click": "Select Save Folder"
+    },
+    {
+     "click": "Generate trials"
+    }
+   ],
+   "purpose": "choose the scratch out folder (dialog answer), then generate TTF trials for every active instance"
+  },
+  "dyyybek--Glyphs-Scripts/Import Images by Unicode Code Point.py": {
+   "make_files": {
+    "out/images/A.jpeg": "png",
+    "out/images/B.jpeg": "png"
+   },
+   "answers": {
+    "get_folder": "@scratch/out/images"
+   },
+   "drive": [
+    {
+     "click": "Choose Path to Images"
+    },
+    {
+     "click": "Place Images"
+    }
+   ],
+   "purpose": "two owned image files A.jpeg and B.jpeg (the default extension); by glyph name (the default), Place Images puts them into A and B on the current master"
+  },
+  "lexislav--Kerning-pair-unlocker/kerning pairs unlocker.py": {
+   "drive": [
+    {
+     "edit": 1,
+     "text": "A C"
+    },
+    {
+     "click": "Go"
+    }
+   ],
+   "purpose": "unlock the class-kerned pair A C (lock left, correction 0, all masters): each master gets a left-class -> C exception with the class value",
+   "classify_if": {
+    "output_error": "TypeError: '>' not supported between instances of 'NoneType' and 'int'",
+    "frame": "kerning pairs unlocker.py\", line 183, in unlockKerning",
+    "reason": "Glyphs-incompatible (controller ruling 2026-10-16, round 32 a8d57f1): unlockKerning compares font.kerningForPair(...) with an int; Glyphs 3 returns None for a missing pair (API docs, GlyphsSDK Glyphs3 wrapper maps values above 1e6 to None), so this Glyphs 2-era script raises the same TypeError in Glyphs 3"
+   }
+  },
+  "loweredcase--glyphs-tools/Drawing/Axis Twister.py": {
+   "tab": "Aacute",
+   "drive": [
+    {
+     "click": "Run 🏁"
+    }
+   ],
+   "purpose": "Aacute (components A + acute, no smart-component axes: GetGo has no smart components and FontLab no Glyphs-style smart axes): Run must report 0 axis values on 0 components and change nothing",
+   "classify_if": {
+    "fixture_unavailable": true,
+    "reason": "fixture-unavailable (controller ruling 2026-10-16): no smart components in any GetGo font. The script only acts on smart components: it reads glyph.smartComponentAxes of each component base and comp.smartComponentValues (Axis Twister.py:57-66, 94-141); none of the 99 GetGo VFJs contains smart-component axes or values (scan for smart/component axes: 0 files)"
+   }
+  },
+  "slobzheninov--GreenHarmony/GreenHarmony.glyphsFilter": {
+   "tab": "S",
+   "purpose": "S/Regular (asymmetric smooth curves): the filter moves smooth nodes to their harmonic positions"
+  },
+  "mekkablue--RealignHandles/RealignHandles.glyphsFilter": {
+   "tab": "O",
+   "prepare": [
+    "path = font.glyphs[\"O\"].layers[font.selectedFontMaster.id].paths[0]",
+    "nodes = list(path.nodes)",
+    "moved = None",
+    "for i, node in enumerate(nodes):",
+    "    prev = nodes[i - 1]",
+    "    if node.type == \"offcurve\" and prev.type != \"offcurve\" and prev.smooth:",
+    "        node.y = node.y + 15",
+    "        moved = (node.x, node.y)",
+    "        break",
+    "result = moved"
+   ],
+   "purpose": "one handle of a smooth extreme of O/Regular is tilted (+15 in y) before the run; Realign Handles must make every smooth node collinear with its handles again"
+  },
+  "mekkablue--Stitcher/Stitcher.glyphsFilter": {
+   "prepare": [
+    "from fontlab_glyport.model.proxies import GSGlyph, GSPath, GSNode",
+    "dot = GSGlyph(\"_circle\")",
+    "font.glyphs.append(dot)",
+    "dot = font.glyphs[\"_circle\"]",
+    "for master in font.masters:",
+    "    square = GSPath()",
+    "    for x, y in ((-10, -10), (10, -10), (10, 10), (-10, 10)):",
+    "        square.nodes.append(GSNode((x, y)))",
+    "    square.closed = True",
+    "    dot.layers[master.id].shapes.append(square)",
+    "    dot.layers[master.id].width = 0",
+    "result = [len(dot.layers[m.id].paths) for m in font.masters]"
+   ],
+   "purpose": "the font gets the dot glyph _circle that Stitcher places by default; Apply with the defaults (interval 100) turns A/Regular into _circle components along its outline, the outline moving to the background"
+  },
+  "mekkablue--Rekha/RekhaMaker.glyphsFilter": {
+   "fixture": "gurmukhi",
+   "tab": "/ka-guru",
+   "purpose": "Zoto Sans Gurmukhi ka-guru (a Gurmukhi letter, the scripts RekhaMaker supports): Insert with the defaults adds the headline bar (height 700, thickness 100, overshoot 20)"
+  },
+  "mekkablue--Rekha/Rekha.glyphsPlugin": {
+   "menu": "Glyph",
+   "menu_item": "Add Rekha Cap",
+   "prepare": [
+    "from fontlab_glyport.model.proxies import GSGlyph",
+    "deva = GSGlyph(\"ka-deva\")",
+    "font.glyphs.append(deva)",
+    "result = font.glyphs[\"ka-deva\"].script"
+   ],
+   "purpose": "plum-var gets an (empty) Devanagari glyph ka-deva so the Glyph menu item is enabled; Add Rekha Cap creates _cap.rekha with the open cap path in every master and opens it in a tab"
+  },
+  "bBoxType--Kernkraft/Kernkraft.glyphsPlugin": {
+   "menu": "Glyph",
+   "menu_item": "Kernschmelze",
+   "drive": [
+    {
+     "click": "Schmelz!"
+    }
+   ],
+   "purpose": "Glyph > Kernschmelze, Schmelz! with the defaults (sources Light and Regular, no target masters): the two sources are equalised, every pair present in one gets 0 in the other"
+  },
+  "michaelrafailyk--PencilModifier/PencilModifier.glyphsPlugin": {
+   "menu": "Path",
+   "menu_item": "Simplify Drawn Path",
+   "purpose": "Path > Pencil Modifier > Simplify Drawn Path toggles that setting off and stores it in the defaults; drawing with the Pencil tool needs a native tool hook (FIXES)"
+  },
+  "eweracs--HTLSManager/HTLSManager.glyphsPlugin": {
+   "menu": "Glyph",
+   "menu_item": "HT Letterspacer Manager",
+   "purpose": "Glyph > HT Letterspacer Manager opens the manager window over the owned font without changing it"
+  },
+  "michaelrafailyk--HighlightImpreciseItalicAngle/HighlightImpreciseItalicAngle.glyphsReporter": {
+   "tab": "I",
+   "prepare": [
+    "node = max(layer.paths[0].nodes, key=lambda n: (n.y, -n.x))",
+    "node.x = node.x + 3",
+    "result = (node.x, node.y)"
+   ],
+   "purpose": "I/Regular gets one stem node moved 3 units so the stem is almost, not exactly, upright (italic angle 0): the reporter must highlight it"
+  },
+  "harbortype--ShowSmoothNodeAngleAndProportion/ShowKinks.glyphsReporter": {
+   "tab": "O",
+   "prepare": [
+    "path = layer.paths[0]",
+    "nodes = list(path.nodes)",
+    "i = next(i for i, n in enumerate(nodes) if n.type != \"offcurve\" and n.smooth)",
+    "node = nodes[i]",
+    "node.selected = True",
+    "handle = nodes[(i + 1) % len(nodes)]",
+    "handle.x = handle.x + 40",
+    "result = (node.x, node.y, handle.x)"
+   ],
+   "purpose": "one smooth node of O/Regular selected, its next handle lengthened by 40 so its proportions differ from the other masters: the reporter labels it and marks the kink risk"
+  },
+  "mekkablue--ShowInterpolations/ShowInterpolation.glyphsReporter": {
+   "purpose": "A shown: the reporter draws the instance interpolations of A behind the outline"
+  },
+  "huertatipografica--HTLetterspacer/HTLetterspacerPreview.glyphsReporter": {
+   "purpose": "A shown: the reporter draws the HT Letterspacer spacing areas for A"
+  },
+  "Mark2Mark--Show-Smart-Plumblines/SmartPlumblines.glyphsReporter": {
+   "tab": "O",
+   "prepare": [
+    "path = layer.paths[0]",
+    "node = next(n for n in path.nodes if n.type != \"offcurve\")",
+    "node.selected = True",
+    "result = (node.x, node.y)"
+   ],
+   "purpose": "a node of O/Regular selected: the reporter draws plumb lines through the selection"
+  },
+  "3type--GuidesPalette/Guides.glyphsPalette": {
+   "window": "Assign Guides",
+   "purpose": "installing the palette writes its default configuration into the font custom parameter Guides Palette Config and shows the Assign Guides panel"
+  },
+  "danielgamage--SelectionPalette/SelectionPalette.glyphsPalette": {
+   "window": "SelectionPalette",
+   "purpose": "the selection palette panel opens; its buttons only change the node selection"
+  },
+  "filipenegrao--glyphsapp-scripts/in_progress/change-x-height-script.py": {
+   "classify_if": {
+    "error": "NameError",
+    "frame": "change-x-height-script.py:191",
+    "reason": "corpus-defect (controller rule 2026-10-16, static proof FIXES.md C1): the unfinished script registers an undefined callback name at line 191 after drawing; Glyphs 4 raises the same NameError"
+   }
+  },
+  "mekkablue--Disguiser/Disguiser.glyphsFilter": {
+   "quarantine": "hung FontLab 2026-10-16 04:04 (round 4, evidence hang-20261016-p-disguiser); re-run only alone, in a dedicated session, after the in-FontLab sync guard (GUARD) and with faulthandler on"
+  }
+ }
+}

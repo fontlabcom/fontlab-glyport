@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- this_file: tests/fixtures/nib/Path.xib
+     Self-authored fixture: an editable folder path control bound to the user
+     defaults (value, enabled, enabled2) that sends an action, and a read-only
+     one (no corpus content). Path.nib is its xcrun ibtool compile output. -->
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="PathOwner">
+            <connections>
+                <outlet property="dialog" destination="root" id="o-1"/>
+                <outlet property="folder" destination="pc" id="o-2"/>
+                <outlet property="shown" destination="ro" id="o-3"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <userDefaultsController representsSharedInstance="YES" id="ud"/>
+        <customView id="root">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <pathControl verticalHuggingPriority="750" allowsExpansionToolTips="YES" id="pc">
+                    <rect key="frame" x="20" y="40" width="260" height="20"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <pathCell key="cell" controlSize="small" selectable="YES" editable="YES" alignment="left" id="pc-cell">
+                        <font key="font" metaFont="smallSystem"/>
+                        <url key="url" string="file://localhost/Applications/"/>
+                        <allowedTypes>
+                            <string>public.folder</string>
+                        </allowedTypes>
+                    </pathCell>
+                    <connections>
+                        <action selector="openDoc:" target="-2" id="a-1"/>
+                        <binding destination="ud" name="value" keyPath="values.com.glyport.demo.path" id="b-1"/>
+                        <binding destination="ud" name="enabled" keyPath="values.com.glyport.demo.on" id="b-2"/>
+                        <binding destination="ud" name="enabled2" keyPath="values.com.glyport.demo.on2" previousBinding="b-2" id="b-3">
+                            <dictionary key="options">
+                                <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                <integer key="NSNoSelectionPlaceholder" value="-1"/>
+                                <integer key="NSNotApplicablePlaceholder" value="-1"/>
+                                <integer key="NSNullPlaceholder" value="-1"/>
+                            </dictionary>
+                        </binding>
+                    </connections>
+                </pathControl>
+                <pathControl verticalHuggingPriority="750" allowsExpansionToolTips="YES" id="ro">
+                    <rect key="frame" x="20" y="10" width="260" height="20"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <pathCell key="cell" selectable="YES" alignment="left" id="ro-cell">
+                        <font key="font" metaFont="system"/>
+                        <url key="url" string="file:///Library/Fonts/"/>
+                    </pathCell>
+                </pathControl>
+            </subviews>
+        </customView>
+    </objects>
+</document>

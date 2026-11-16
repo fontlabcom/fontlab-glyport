@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- this_file: tests/fixtures/nib/Box.xib
+     Self-authored fixture: a titled box with a checkbox in its content view,
+     a separator and an untitled custom box (no corpus content).
+     Box.nib is its xcrun ibtool compile output. -->
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="BoxOwner">
+            <connections>
+                <outlet property="dialog" destination="root" id="o-1"/>
+                <outlet property="group" destination="grp" id="o-2"/>
+                <outlet property="line" destination="sep" id="o-3"/>
+                <outlet property="plain" destination="cst" id="o-4"/>
+                <outlet property="inner" destination="chk" id="o-5"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="root">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box title="Options" id="grp">
+                    <rect key="frame" x="17" y="56" width="166" height="76"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView" id="grp-content">
+                        <rect key="frame" x="3" y="3" width="160" height="58"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" id="chk">
+                                <rect key="frame" x="16" y="20" width="100" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Inside" bezelStyle="regularSquare" imagePosition="left" inset="2" id="chk-cell">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                    </view>
+                </box>
+                <box verticalHuggingPriority="750" boxType="separator" id="sep">
+                    <rect key="frame" x="20" y="45" width="260" height="5"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                </box>
+                <box boxType="custom" borderType="line" titlePosition="noTitle" id="cst">
+                    <rect key="frame" x="20" y="10" width="100" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView" id="cst-content">
+                        <rect key="frame" x="1" y="1" width="98" height="28"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                </box>
+            </subviews>
+        </customView>
+    </objects>
+</document>

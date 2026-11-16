@@ -1,0 +1,18 @@
+{
+  "repository": "https://github.com/fontlabcom/getgo-fonts",
+  "revision": "25a4d6d7099143090093e5820660b77222ac670b",
+  "source_prefix": "getgo-fonts",
+  "files": {
+    "apache/LICENSE.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "cc0/LICENSE.txt": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+    "apache/cafe/cafe.vfj": "1917b74b17496999b6d71bfb6b212d10d8777bf26e35948cd10de3f2b00abc51",
+    "apache/cafe/cafe.md": "24717829b494b69b74fb724765049371acda13174095106a99142288e417afbb",
+    "apache/cafe/cafe.yaml": "619acba45fbc35d0048836ad3b11e96e27c4f0b7e2172eeeef1f074cbdd1db69",
+    "apache/zotosans/zotosans-gurmukhi.vfj": "da231530b0283f039bbfa1fcfbba327aa8aeb65e6301269c655b80b45268c8a3",
+    "apache/zotosans/zotosans-gurmukhi.md": "2625a2128ad3b21c56ee67e123d54285fc19e5b33f3081bb5cb8f9e88402cb63",
+    "apache/zotosans/zotosans-gurmukhi.yaml": "3913b82347a6444d7b44503eb614655b01f8c286ff1a315b7068f543b233aa95",
+    "cc0/plum/plum-var.vfj": "f4ab33f1ebe1325fd945090fb9867a95f8adde11a79aa8237faccae32b4be4a9",
+    "cc0/plum/plum-var.md": "0485e3cc55b145d05ad586b9b80d86b9bacad950586e2997aac4a8ec478df29f",
+    "cc0/plum/plum-var.yaml": "db219ea58f9ff315a904cb0f3c4143dbee3684ac035c44974d50d46f62576765"
+  }
+}

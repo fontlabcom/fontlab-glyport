@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- this_file: tests/fixtures/nib/Combo.xib
+     Self-authored fixture: an editable combo box with items, a title and an
+     action, and one fed by a data source (no corpus content).
+     Combo.nib is its xcrun ibtool compile output. -->
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ComboOwner">
+            <connections>
+                <outlet property="dialog" destination="root" id="o-1"/>
+                <outlet property="combo" destination="cb" id="o-2"/>
+                <outlet property="sourced" destination="cb2" id="o-3"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="root">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <comboBox verticalHuggingPriority="750" id="cb">
+                    <rect key="frame" x="20" y="40" width="150" height="26"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="top" drawsBackground="YES" completes="NO" numberOfVisibleItems="7" id="cb-cell">
+                        <font key="font" metaFont="system"/>
+                        <objectValues>
+                            <string>top</string>
+                            <string>bottom</string>
+                            <string>center</string>
+                        </objectValues>
+                    </comboBoxCell>
+                    <connections>
+                        <action selector="anchorChosen:" target="-2" id="a-1"/>
+                    </connections>
+                </comboBox>
+                <comboBox verticalHuggingPriority="750" id="cb2">
+                    <rect key="frame" x="20" y="10" width="150" height="26"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesDataSource="YES" numberOfVisibleItems="5" id="cb2-cell">
+                        <font key="font" metaFont="system"/>
+                    </comboBoxCell>
+                    <connections>
+                        <outlet property="dataSource" destination="-2" id="ds"/>
+                    </connections>
+                </comboBox>
+            </subviews>
+        </customView>
+    </objects>
+</document>

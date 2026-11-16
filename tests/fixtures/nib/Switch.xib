@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- this_file: tests/fixtures/nib/Switch.xib
+     Self-authored fixture: a switch bound to the user defaults with an action,
+     a Glyphs mouse-over button showing only an image (Dot.png), and a push
+     button with an image left of its title (no corpus content).
+     Switch.nib is its xcrun ibtool compile output. -->
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="SwitchOwner">
+            <connections>
+                <outlet property="dialog" destination="root" id="o-1"/>
+                <outlet property="toggle" destination="sw" id="o-2"/>
+                <outlet property="hover" destination="mo" id="o-3"/>
+                <outlet property="pictured" destination="pb" id="o-4"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <userDefaultsController representsSharedInstance="YES" id="ud"/>
+        <customView id="root">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" id="sw">
+                    <rect key="frame" x="10" y="20" width="42" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <connections>
+                        <action selector="toggled:" target="-2" id="a-1"/>
+                        <binding destination="ud" name="value" keyPath="values.com.glyport.demo.switch" id="b-1"/>
+                    </connections>
+                </switch>
+                <button toolTip="Hover me" id="mo" customClass="GSMouseOverButton">
+                    <rect key="frame" x="70" y="20" width="23" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Dot" imagePosition="only" alignment="center" inset="2" id="mo-cell">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="hovered:" target="-2" id="a-2"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" id="pb">
+                    <rect key="frame" x="110" y="13" width="120" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Update" bezelStyle="rounded" image="Dot" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pb-cell">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+            </subviews>
+        </customView>
+    </objects>
+    <resources>
+        <image name="Dot" width="16" height="8"/>
+    </resources>
+</document>

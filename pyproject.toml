@@ -1,0 +1,64 @@
+# this_file: pyproject.toml
+[build-system]
+requires = ["hatchling>=1.27", "hatch-vcs>=0.4"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fontlab-glyport"
+dynamic = ["version"]
+description = "Glyphs script and plugin compatibility for FontLab"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0 AND Unicode-3.0 AND CC0-1.0"
+license-files = ["LICENSE", "LICENSE-UNICODE-3.0", "NOTICE"]
+dependencies = [
+    "fontlab-fontlabapp>=1.2.10",
+    "fontlab-python-pens>=1.0.0",
+    "fissix>=24.4.24",
+    "glyphslib>=6.16.1",
+]
+
+[project.urls]
+Repository = "https://github.com/fontlabcom/fontlab-glyport"
+
+[project.optional-dependencies]
+test = ["pytest>=8", "fonttools>=4.38"]
+cocoa = ["pyobjc-framework-Cocoa>=11; sys_platform == 'darwin'"]
+geometry = ["fonttools>=4.38"]
+boolean = ["skia-pathops>=0.8"]
+glyphdata = ["glyphslib>=6.16.1"]
+# Host-side driver for `glyport verify --native` (receipt_native imports it lazily).
+# Not on PyPI: install the workspace's fontlab-remopy wheel (DEPENDENCIES.md).
+native = ["fontlab-remopy>=0.2"]
+
+[project.scripts]
+glyport = "fontlab_glyport.cli:main"
+
+[tool.hatch.version]
+source = "vcs"
+[tool.hatch.version.raw-options]
+fallback_version = "0.0.1"
+[tool.hatch.build.targets.wheel]
+packages = ["src/fontlab_glyport"]
+[tool.hatch.build.targets.sdist]
+only-include = ["install.vfpy", "Scripts", "src", "tests", "native-drivers", "tools/deploy/deploy_launcher.py", "tools/deploy/launcher_template.py", "tools/migrate_app_paths.py", "realuse/manifest-portable.json", "realuse/provenance.json", "realuse/oracles", "realuse/fixtures", "pyproject.toml", "README.md", "PLAN.md", "TODO.md", "src_docs/md/index.md", "src_docs/md/guides/COMPATIBILITY.md", "src_docs/md/guides/GLYPH_INFO_MANAGER.md", "src_docs/md/guides/LAYER_IDENTITIES.md", "src_docs/md/guides/custom-parameters.md", "src_docs/md/guides/arabic-presentation.md", "src_docs/md/guides/legacy-and-ros.md", "src_docs/md/guides/unicode-lookup.md", "src_docs/md/guides/production-metadata.md", "src_docs/md/guides/glyph-descriptions.md", "LICENSE", "LICENSE-UNICODE-3.0", "NOTICE", "CHANGELOG.md", "DEPENDENCIES.md", "test.sh"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.uv]
+# fontlab-remopy is not on PyPI, so uv must never try to resolve it: the always-
+# false marker (disjoint from requires-python) drops it from uv's lock and syncs.
+# The `native` extra stays in the wheel metadata for pip/uv installs that bring
+# the remopy wheel themselves.
+override-dependencies = ["fontlab-remopy; python_version < '3'"]
+[tool.fontlab-install]
+# install.vfpy: reverse-domain id; FontLab keeps Extensions/<id>/install.log.
+id = "com.fontlab.glyport"
+dependencies = ["fontlab-fontlabapp>=1.2.10", "fontlab-python-pens>=1.0.0", "fissix>=24.4.24", "glyphslib>=6.16.1"]
+
+[tool.uv.sources]
+# fontlab-fontlabapp is not published; resolve it from the sibling checkout.
+fontlab-fontlabapp = { path = "../fontlab-fontlabapp", editable = true }
+# fontlab-python-pens is not published either.
+fontlab-python-pens = { path = "../fontlab-python-pens", editable = true }

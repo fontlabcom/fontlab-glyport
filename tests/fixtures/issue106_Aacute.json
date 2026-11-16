@@ -1,0 +1,149 @@
+{
+  "name": "Aacute",
+  "unicode": "00c1",
+  "layers": [
+    {
+      "name": "Bold",
+      "autoRecipe": "A+acute",
+      "flags": 16,
+      "advanceWidth": 596,
+      "elements": [
+        {
+          "component": {
+            "glyphName": "A"
+          },
+          "locked": true
+        },
+        {
+          "component": {
+            "glyphName": "acute"
+          },
+          "transform": {
+            "xOffset": 98,
+            "yOffset": 210
+          },
+          "locked": true,
+          "nonSpacing": true
+        }
+      ],
+      "anchors": [
+        {
+          "name": "acute",
+          "point": "278 688"
+        },
+        {
+          "name": "bottom",
+          "point": "318 0"
+        },
+        {
+          "name": "grave",
+          "point": "318 688"
+        },
+        {
+          "name": "ogonek",
+          "point": "626 0"
+        },
+        {
+          "name": "top",
+          "point": "298 688"
+        }
+      ],
+      "color": "#bac000"
+    },
+    {
+      "name": "Regular",
+      "flags": 16,
+      "advanceWidth": 596,
+      "elements": [
+        {
+          "component": {
+            "glyphName": "A"
+          },
+          "locked": true
+        },
+        {
+          "component": {
+            "glyphName": "acute"
+          },
+          "transform": {
+            "xOffset": 88,
+            "yOffset": 210
+          },
+          "locked": true,
+          "nonSpacing": true
+        }
+      ],
+      "anchors": [
+        {
+          "name": "acute",
+          "point": "278 688"
+        },
+        {
+          "name": "bottom",
+          "point": "318 0"
+        },
+        {
+          "name": "grave",
+          "point": "318 688"
+        },
+        {
+          "name": "ogonek",
+          "point": "572 0"
+        },
+        {
+          "name": "top",
+          "point": "298 688"
+        }
+      ],
+      "color": "#00cce5"
+    },
+    {
+      "name": "Light",
+      "autoRecipe": "A+acute",
+      "flags": 16,
+      "advanceWidth": 554,
+      "elements": [
+        {
+          "component": {
+            "glyphName": "A"
+          },
+          "locked": true
+        },
+        {
+          "component": {
+            "glyphName": "acute"
+          },
+          "transform": {
+            "xOffset": 67,
+            "yOffset": 210
+          },
+          "locked": true,
+          "nonSpacing": true
+        }
+      ],
+      "anchors": [
+        {
+          "name": "acute",
+          "point": "257 688"
+        },
+        {
+          "name": "bottom",
+          "point": "297 0"
+        },
+        {
+          "name": "grave",
+          "point": "297 688"
+        },
+        {
+          "name": "ogonek",
+          "point": "510 0"
+        },
+        {
+          "name": "top",
+          "point": "277 688"
+        }
+      ],
+      "color": "#ff34ff"
+    }
+  ]
+}

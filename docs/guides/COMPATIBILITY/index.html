@@ -1,0 +1,2483 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Glyport public contracts and complete maintained guides.">
+      
+      
+      
+        <link rel="canonical" href="https://fontlabcom.github.io/fontlab-glyport/guides/COMPATIBILITY/">
+      
+      
+        <link rel="prev" href="../../licence/">
+      
+      
+        <link rel="next" href="../GLYPH_INFO_MANAGER/">
+      
+      
+        
+      
+      
+      
+      
+        
+        
+        
+          <link rel="icon" href="../../assets/images/favicon.png">
+        
+      
+      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-materialx-10.1.8">
+    
+    
+      
+        <title>COMPATIBILITY - Glyport</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.314bbef5.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a45159b5.min.css">
+      
+    
+    
+
+    
+
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/local.css">
+    
+      <link rel="stylesheet" href="https://i.fontlab.com/fltheme26/1.0.0/components.css">
+    
+      <link rel="stylesheet" href="https://i.fontlab.com/fltheme26/1.0.0/theme.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+  <script src="https://i.fontlab.com/menu/fontlab.js" defer></script>
+
+  </head>
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" data-mx-topbar="glass">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="toc" type="checkbox" id="__toc" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__toc"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#compatibility-protocols-and-historical-implementation-notes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+  <fontlab-menu mode="light" site-label="Glyport"
+                site-url="https://fontlabcom.github.io/fontlab-glyport/"
+                mobile-menu="materialx" mobile-search="materialx"></fontlab-menu>
+  
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Glyport" class="md-header__button md-logo" aria-label="Glyport" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Glyport
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              COMPATIBILITY
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.25 2a8.25 8.25 0 0 1 6.34 13.53l5.69 5.69a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-5.69-5.69A8.25 8.25 0 1 1 10.25 2M3.5 10.25a6.75 6.75 0 1 0 13.5 0 6.75 6.75 0 0 0-13.5 0"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.25 2a8.25 8.25 0 0 1 6.34 13.53l5.69 5.69a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-5.69-5.69A8.25 8.25 0 1 1 10.25 2M3.5 10.25a6.75 6.75 0 1 0 13.5 0 6.75 6.75 0 0 0-13.5 0"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/fontlabcom/fontlab-glyport" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    fontlabcom/fontlab-glyport
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Glyport" class="md-nav__button md-logo" aria-label="Glyport" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Glyport
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/fontlabcom/fontlab-glyport" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    fontlabcom/fontlab-glyport
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glyphs-cocoa-and-vanilla/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glyphs Cocoa And Vanilla
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development-and-limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Development And Limits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../licence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Licence
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Complete maintained guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Complete maintained guides
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    COMPATIBILITY
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    COMPATIBILITY
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc">
+      
+        <li class="md-nav__item">
+  <a href="#issue-205-direct-public-api-and-live-outlines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issue 205 — direct public API and live outlines
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Issue 205 — direct public API and live outlines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#public-api-review-additions-2026-11-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public API review additions — 2026-11-03
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glyph-info-lookup-limitations-2026-11-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glyph Info lookup limitations — 2026-11-01
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Glyph Info lookup limitations — 2026-11-01">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#glyph-case-lifecycle-candidate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glyph case lifecycle candidate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#glyph-script-lifecycle-candidate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glyph script lifecycle candidate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classification-and-shared-resolver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classification and shared resolver
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordinary-glyphs-imports-in-fontlab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ordinary Glyphs imports in FontLab
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-2-source-adaptation-r016r017" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python 2 source adaptation (R016/R017)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execution-receipts-and-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Execution receipts and errors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#owned-execution-scopes-r017" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Owned execution scopes (R017)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#live-model-r019r022-first-slice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Live model (R019–R022, first slice)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glyphsapp-host-services-r026-first-slice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GlyphsApp host services (R026 first slice)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GlyphsApp host services (R026 first slice)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fontlab-bridge-glyphsappfontlab_bridgepy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FontLab bridge (glyphsapp/fontlab_bridge.py)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vanilla-ui-first-slice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vanilla UI (first slice)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runtime-entry-points-r006-r015-r033-r048" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Runtime entry points (R006, R015, R033, R048)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cocoa-vanilla-remainder-and-nibxib-r029r031" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cocoa, Vanilla remainder and NIB/XIB (R029–R031)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plugins-and-editor-drawing-r025r027-r032" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plugins and editor drawing (R025–R027, R032)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Status">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cocoa-backend-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cocoa backend selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issue120-p2-parseable-legacy-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issue120 P2: parseable legacy APIs
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GLYPH_INFO_MANAGER/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GLYPH_INFO_MANAGER
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LAYER_IDENTITIES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LAYER_IDENTITIES
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arabic-presentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    arabic-presentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-parameters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    custom-parameters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glyph-descriptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    glyph-descriptions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../legacy-and-ros/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    legacy-and-ros
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../production-metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    production-metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unicode-lookup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    unicode-lookup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc">
+      
+        <li class="md-nav__item">
+  <a href="#issue-205-direct-public-api-and-live-outlines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issue 205 — direct public API and live outlines
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Issue 205 — direct public API and live outlines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#public-api-review-additions-2026-11-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public API review additions — 2026-11-03
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glyph-info-lookup-limitations-2026-11-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glyph Info lookup limitations — 2026-11-01
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Glyph Info lookup limitations — 2026-11-01">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#glyph-case-lifecycle-candidate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glyph case lifecycle candidate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#glyph-script-lifecycle-candidate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glyph script lifecycle candidate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classification-and-shared-resolver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classification and shared resolver
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordinary-glyphs-imports-in-fontlab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ordinary Glyphs imports in FontLab
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-2-source-adaptation-r016r017" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python 2 source adaptation (R016/R017)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execution-receipts-and-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Execution receipts and errors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#owned-execution-scopes-r017" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Owned execution scopes (R017)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#live-model-r019r022-first-slice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Live model (R019–R022, first slice)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glyphsapp-host-services-r026-first-slice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GlyphsApp host services (R026 first slice)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GlyphsApp host services (R026 first slice)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fontlab-bridge-glyphsappfontlab_bridgepy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FontLab bridge (glyphsapp/fontlab_bridge.py)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vanilla-ui-first-slice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vanilla UI (first slice)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runtime-entry-points-r006-r015-r033-r048" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Runtime entry points (R006, R015, R033, R048)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cocoa-vanilla-remainder-and-nibxib-r029r031" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cocoa, Vanilla remainder and NIB/XIB (R029–R031)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plugins-and-editor-drawing-r025r027-r032" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plugins and editor drawing (R025–R027, R032)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Status">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cocoa-backend-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cocoa backend selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issue120-p2-parseable-legacy-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issue120 P2: parseable legacy APIs
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+  
+
+
+<h1 id="compatibility-protocols-and-historical-implementation-notes">Compatibility protocols and historical implementation notes</h1>
+<p><a id="issue-205--direct-public-api-and-live-outlines"></a></p>
+<h2 id="issue-205-direct-public-api-and-live-outlines">Issue 205 — direct public API and live outlines</h2>
+<table>
+<thead>
+<tr>
+<th>Public member</th>
+<th>Implementation and evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fontlab_glyport.GlyphsApp</code></td>
+<td>Lazy public package forwarding every name in <code>make_glyphsapp_module().__all__</code>; the package's <code>__all__</code> is identical. <code>use_backend(backend, profile="glyphs4")</code> binds an explicit backend before access. Missing host raises <code>HostUnavailable</code>. <code>dir()</code> is host-free; <code>unbind()</code> closes and forgets an independent binding.</td>
+</tr>
+<tr>
+<td><code>GlyphsApp.plugins</code></td>
+<td>Seven SDK base classes: ReporterPlugin, GeneralPlugin, FilterWithDialog, FilterWithoutDialog, PalettePlugin, SelectTool, FileFormatPlugin. Active bootstrap identities are reused; the existing native session binds classes once; without a bound backend the original classes import without a plugin environment.</td>
+</tr>
+<tr>
+<td><code>GSLayer.removeOverlap(checkSelection=False)</code></td>
+<td>Both backends use existing skia-pathops winding-aware simplification in Python; the optional <code>boolean</code> extra is required. Closed selected contours are combined, open contours and components retained. Styled closed paths are refused by the existing boolean implementation.</td>
+</tr>
+<tr>
+<td><code>GSLayer.decomposeComponents()</code></td>
+<td>Both backends expand recursively after cycle/reference preflight. FakeBackend composes affine transforms in Python. Native decomposition reuses <code>flShape.ejectTo()</code> and <code>flLayer.removeShape()</code>/<code>insertShape()</code>, preserving explicit reference layers through the existing component route.</td>
+</tr>
+<tr>
+<td><code>GSLayer.correctPathDirection()</code></td>
+<td>Python fontTools analytic area, containment and contour reversal; outer contours counterclockwise, nested counters clockwise. Open paths and components retained. Containment is an informed guess for intersecting/touching contours; Glyphs' additional start-point/order normalization is not reproduced.</td>
+</tr>
+<tr>
+<td><code>GSLayer.addNodesAtExtremes(force=False, checkSelection=False)</code></td>
+<td>Python fontTools derivative roots and exact cubic/quadratic splitting; implied quadratic points supported. Selection limits processing to fully selected segments. No grid rounding or distortion is performed, so <code>force</code> has the same exact result.</td>
+</tr>
+<tr>
+<td><code>GSLayer.getPen()</code> / <code>getPointPen()</code></td>
+<td>One dual-protocol writing pen, using fontTools SegmentToPointPen. Each completed contour/component appends through the backend's existing collection API; node names and smoothness retained. A pen owns one nested Undo step across contours/components; finish with <code>doneDrawing()</code>/<code>close()</code> or a context manager. Caller-owned Undo groups still nest.</td>
+</tr>
+<tr>
+<td><code>GSLayer.draw(pen, contours=True, components=True)</code></td>
+<td>Backend snapshots emitted through fontTools PointToSegmentPen. No mutation; component transforms retained. FontTools outline protocol only: RoboFab-specific width/note/anchor/doneDrawing hooks are not emitted.</td>
+</tr>
+<tr>
+<td><code>GSLayer.drawPoints(pointPen, contours=True, components=True)</code></td>
+<td>Point protocol with node names, smoothness, cubic/quadratic types, open/closed contours and affine components. Pen identifiers have no native counterpart and are not retained.</td>
+</tr>
+<tr>
+<td><code>GSFont.save(path=None, formatVersion=None, makeCopy=False)</code></td>
+<td>Qualified <code>fontpr.call("save_font", font_id=package.fgId, path=absolute_path, overwrite=True)</code> for <code>.vfj</code>/<code>.vfc</code>, verified with <code>is_file()</code>. No current-font requirement; pending changes are refused. Copies restore the original recorded filepath; non-None formatVersion is unsupported. Export UFO/other formats separately. FakeBackend writes first-master UFO geometry/metrics/Unicode; it is an offline test serializer, not a complete multi-master or font-metadata exporter.</td>
+</tr>
+<tr>
+<td><code>GSFont.close(ignoreChanges=...)</code></td>
+<td>Native <code>flPackage.close(save=False)</code>. Omitted/false permission refuses unsaved or unknown dirty state (<code>flPackage.getProperty("__has_history_changes")</code>); explicitly pass <code>ignoreChanges=True</code> to discard edits. Pending Undo work is refused; descendants become stale. FakeBackend invalidates its document.</td>
+</tr>
+<tr>
+<td><code>GSFont.filepath</code> / <code>familyName</code></td>
+<td>Native <code>flPackage.fileName</code> reader and writable FontGate <code>fgFont.info.familyName</code>. No new <code>fontName</code> or localized <code>familyNames</code> facade.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="public-api-review-additions-2026-11-03">Public API review additions — 2026-11-03</h3>
+<table>
+<thead>
+<tr>
+<th>Public member</th>
+<th>Support and proving tests</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SDK scalar constants and aliases</td>
+<td>SDK names/values audited, including <code>GSRTL=RTL=2</code>, <code>GSBIDI=BIDI=1</code>, node types/numeric codes, metrics, hints, export formats, direction, annotation, style and property keys. <code>GSGuideLine is GSGuide</code>. Constants do not promise corresponding operations. <code>test_all_overlapping_sdk_constants_match</code> parses the authoritative SDK when present; <code>GLYPHS_SDK_PATH</code> accepts its root or wrapper file, otherwise its location is computed relative to the reference workspace/repository.</td>
+</tr>
+<tr>
+<td><code>GSFont()</code></td>
+<td>Explicit empty detached storage with no native binding; writable metadata, glyphs and masters. Saves first-master UFOs through the existing in-memory serializer. Registering it with <code>Glyphs.fonts</code> or saving it as a native document is unsupported; no FontLab package is created. <code>test_empty_font_and_master_can_be_filled_and_saved</code>.</td>
+</tr>
+<tr>
+<td><code>GSFontMaster()</code> / <code>font.masters.append()</code></td>
+<td>Detached name/basic metrics writable. In-memory backend accepts and binds the master; native append explicitly refuses because native master creation is not mapped. <code>test_native_master_append_and_duplicate_rename_refuse_before_notification</code>.</td>
+</tr>
+<tr>
+<td><code>layer.selection = [...]</code> / <code>= []</code> / <code>clearSelection()</code></td>
+<td>Nodes, anchors, components and guides in memory, including detached layers. Whole-input ownership/kind preflight. Native nodes and <code>flShape.selected</code> components are supported without Undo; anchors have no public bound pinpoint selection API and guides have no public selected field. Only explicitly selecting an unsupported kind refuses before mutation. Clearing/replacing supported selection skips those kinds, whose selection state cannot be observed or changed; reads omit them. <code>test_selection_replaces_and_clears_all_four_kinds_without_undo</code>, <code>test_selection_preflights_foreign_and_unsupported_kinds</code>, native selection contract test.</td>
+</tr>
+<tr>
+<td><code>GSComponent(glyph=None, offset=(0,0), scale=(1,1), transform=None)</code></td>
+<td>Explicit transform overrides offset/scale. Read/write affine transform, two-axis scale and CCW rotation; translation retained. Pure horizontal/vertical mirrors retain the negative X/Y scale respectively, with zero rotation. Reflected matrices use the equivalent representation with rotation nearest zero; matrix reads retain arbitrary affine shear. Live writes use existing copy-on-write/history guards; automatic layers refuse. Public/native transform regression tests check numeric matrices and original history ownership.</td>
+</tr>
+<tr>
+<td><code>GSNode.type</code>, <code>GSAnchor.name</code></td>
+<td>Writable detached and live. Node types are validated in the proxy before any backend access; only line/curve/qcurve/offcurve SDK string values are accepted. Native types use documented <code>flNode.NodeType</code> masks, preserving coordinates and other flags through copy-on-write. Native curve endpoints require existing controls (two for cubic); line conversion with incoming controls and mixed cubic/quadratic contours refuse before mutation. Native/public node and anchor tests verify expected values, lookup identity and notifications.</td>
+</tr>
+<tr>
+<td><code>font.familyName</code>, <code>unitsPerEm</code> / <code>upm</code></td>
+<td>Writable through package history; UPM must be a positive integer and native <code>setUpm(value, False)</code> does not scale outlines. Public/native metadata parameter tests.</td>
+</tr>
+<tr>
+<td><code>master.name</code>, <code>ascender</code>, <code>capHeight</code>, <code>xHeight</code>, <code>descender</code>, <code>italicAngle</code></td>
+<td>Writable through package history and matching Font-window guards; finite metrics only. Native rename retains proxy identity and prepares affected master/bracket layers</td>
+</tr>
+<tr>
+<td>and masks; affected automatic layers refuse before mutation; another master's metric write restores the active master. Public/native master parameter tests and focus/duplicate-name refusal cases.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>GSPath.reverse()</code></td>
+<td>Reverse incoming segment types and node order for open/closed cubic/quadratic paths; retain positions, node metadata and closed flag. Live paths use existing guarded node replacement (retained old node handles become stale), one Undo group. <code>test_reverse_preserves_curve_geometry_flags_and_undo</code>.</td>
+</tr>
+<tr>
+<td><code>GlyphsApp.plugins</code> base imports</td>
+<td>All seven bases import without a bound backend or native modules. Active/session-bound class identities remain reused. <code>test_plugin_bases_import_without_backend_or_host</code> and existing identity tests.</td>
+</tr>
+<tr>
+<td><code>GSInstance</code> interpolation</td>
+<td><code>interpolatedFont</code> (and unimplemented interpolation members) explicitly raise <code>UnsupportedCapability</code>; no interpolation or generated font is fabricated.</td>
+</tr>
+</tbody>
+</table>
+<p>All new live property writes nest in the existing Undo context. Offline native
+contract tests prove calls/guards and notification counts, not real FontLab
+Undo/Redo, editor selection or saved/reopened acceptance. No live environment
+or canonical checkout was changed.</p>
+<p>Extrema preserve closed-path rotation, and Boolean output omits duplicate closing
+nodes. Unchanged extrema/overlap operations retain tokens, dirty state and Undo.
+All four outline edits return <code>None</code>, nest inside existing layer/glyph Undo
+groups, stage computed geometry before mutation and retain collection rollback.
+The native backend publishes Python geometry using the existing guarded
+<code>flNode</code>/<code>flContour</code> constructors and <code>flLayer</code> shape writes. The supplied echopy
+stubs expose no matching <strong>layer-scoped</strong> boolean, winding or extrema operation;
+glyph/shape boolean methods are not substituted for a layer edit.</p>
+<p>The capitalized public package lives under an additional <code>_public</code> package
+search root so it coexists with internal <code>glyphsapp/</code> on case-insensitive macOS
+volumes. All existing internal module paths remain unchanged. An active
+<code>activate()</code> is the source of truth; calling it after an independent public
+session is bound is explicitly refused until <code>unbind()</code> releases it. <code>use_backend</code>
+and <code>unbind</code> are not in the facade's star-import list. The scoped <code>run_script</code> session remains scoped to its handle.</p>
+<p>Evidence: FakeBackend geometry, pen recording/round-trips, actual UFO writes,
+missing-host/lazy imports, public export equality and bootstrap identity tests;
+native save/close are call-contract doubles only. This adds no FontLab runtime,
+native Undo/Redo or saved/reopened acceptance claim.
+Reference contracts: supplied Glyphs SDK wrapper docstrings and the official
+<a href="https://handbook.glyphsapp.com/editing-paths/">path-direction handbook</a> and
+<a href="https://fonttools.readthedocs.io/en/latest/pens/pointPen.html">fontTools point-pen protocols</a>.</p>
+<h2 id="glyph-info-lookup-limitations-2026-11-01">Glyph Info lookup limitations — 2026-11-01</h2>
+<p><code>Glyphs.glyphInfoForName(name, font=None)</code> queries the shared manager
+(glyphsLib's global fallback data) when <code>font</code> is None. With a font it queries
+<code>font.glyphsInfo()</code>: that document's local Glyph Info manager when one is loaded,
+else the shared manager. A <code>font</code> that is not a GSFont raises <code>TypeError</code>. The
+document-local lifecycle needs an info provider (see GLYPH_INFO_MANAGER.md).
+A font glyph's metadata and outlines are not substituted for a Glyph Info database.
+Custom global GlyphData overlays remain unimplemented; this fallback is not full
+Glyphs database equivalence. Earlier candidate artifacts still use active-font
+lookup and do not contain this source repair.</p>
+<p>The newer <a href="../unicode-lookup/">global Unicode lookup</a> implements
+<code>glyphInfoForUnicode(String, font=None)</code> with exact combined-index lookup and
+source-backed synthesis. Integer name lookup dispatches there and keeps the
+supplied font, so both lookups use the same manager. The index inserts each public record's primary
+then legacy encoding in record order, with last-write precedence. The retained
+base parser proves legacy inclusion; this corrects earlier primary-only claims.
+Legacy lookup retains separate primary/legacy fields: <code>FE8D</code> returns
+<code>alef-ar.isol</code> with primary None and legacy <code>FE8D</code>. Public glyphsLib 6.16.2 gives
+72,131 combined keys, including 730 legacy keys; <code>0000</code> selects the later <code>NULL</code>.
+Private wheel/sdist and exact consumer checks pass for the retained parent Unicode snapshot; the new production candidate awaits its own installed and consumer checks; native workflow gates remain open;
+older immutable reports retain their historical primary-only behavior.
+Noncanonical spellings, signed32bit parsing and safe malformed-UTF16 refusal
+are covered separately from proprietary database equivalence and native workflows.</p>
+<p>An offline comparison with eleven retained Glyphs 4 native-manager cases matched
+four represented fields (name, first Unicode, category and subcategory) in six
+cases. Glyport refused <code>A.ss01</code>, <code>_corner.test</code>, <code>_part.test</code>, the empty name and
+an unknown ordinary name. The retained upstream manager synthesized the first
+three and returned nil for the last two. These observations do not establish
+Python-wrapper behavior in every supported Glyphs version.</p>
+<p><code>GSGlyphInfo.script</code> now snapshots the supplied metadata script, including None
+when no script is assigned. Global lookups use glyphsLib records rather than
+guessing from the current glyph encoding; aliases resolve to canonical records.
+The field is read-only. This does not qualify custom database overrides or native
+workflows. Earlier artifacts do not contain the script-field addition.</p>
+<p><code>GSGlyphInfo.case</code> snapshots the supplied case enum. Global database lookups
+map explicit case metadata to no-case/upper/lower/small-caps/minor/other (0–5),
+and missing case metadata to no-case. Unknown labels raise <code>GSGlyphInfo.case</code>
+rather than becoming no-case. Punctuation, combining marks and ligatures can
+have case values that differ from Unicode general categories. This does not
+add synthesized-name and custom-database support. Earlier artifacts lack this field.</p>
+<h3 id="glyph-case-lifecycle-candidate">Glyph case lifecycle candidate</h3>
+<p><code>GSGlyph.case</code> uses case metadata for supported names, including ligatures,
+punctuation and combining marks. Explicit assignment changes the current case;
+it does not enable <code>storeCase</code>. Setting an already-false <code>storeCase</code> does not
+refresh metadata. Enabling it preserves the current case across name/metadata
+refreshes. An attached true-to-false transition restores the supported database
+default. Copy and unique attachment preserve the current value and flag.</p>
+<p>This follows the pinned public wrapper and retained Glyphs 4 source analysis;
+it is not new native verification. The public
+<a href="https://docu.glyphsapp.com/Core/GlyphsCore/GSGlyph/case/">case</a> and
+<a href="https://docu.glyphsapp.com/Core/GlyphsCore/GSGlyph/storeCase/">storeCase</a>
+documentation describe the database/storage relationship.</p>
+<p>Detached true-to-false reset is explicitly unsupported pending qualification.
+Custom font/global databases and synthesized-name metadata remain unsupported.
+The existing <code>updateGlyphInfo</code> missing-record refusal and Unicode/name behavior
+remain separate limits; this change does not establish whole-method fidelity.
+Case persistence uses the existing glyph-lib route. Native history, save/reopen,
+fresh artifacts and original scripts' full workflows still require verification.</p>
+<p>Owned offline example (requires the candidate source, not the preceding wheel):</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fly.gp.model</span><span class="w"> </span><span class="kn">import</span> <span class="n">GSGlyph</span>
+
+<span class="n">glyph</span> <span class="o">=</span> <span class="n">GSGlyph</span><span class="p">(</span><span class="s2">"ordfeminine"</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">glyph</span><span class="o">.</span><span class="n">case</span> <span class="o">==</span> <span class="mi">4</span>  <span class="c1"># Glyph Info classifies it as a minor figure.</span>
+<span class="n">glyph</span><span class="o">.</span><span class="n">case</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">assert</span> <span class="n">glyph</span><span class="o">.</span><span class="n">storeCase</span> <span class="ow">is</span> <span class="kc">False</span>  <span class="c1"># Assignment alone is temporary.</span>
+<span class="n">glyph</span><span class="o">.</span><span class="n">storeCase</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">glyph</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">"f_f_i"</span>
+<span class="k">assert</span> <span class="n">glyph</span><span class="o">.</span><span class="n">case</span> <span class="o">==</span> <span class="mi">3</span>  <span class="c1"># Stored override survives a known-name change.</span>
+</code></pre></div>
+<h3 id="glyph-script-lifecycle-candidate">Glyph script lifecycle candidate</h3>
+<p><code>GSGlyph.script</code> uses named-glyph metadata without requiring a Unicode value.
+Explicit <code>None</code>, empty strings and script names remain distinct. Assignment does
+not enable <code>storeScript</code>; assigning false to an already-false flag is a no-op.
+Enabling the flag preserves the current script through supported rename/refresh
+operations. Disabling it on an attached glyph restores a known database record's
+script, including a record whose script is None. Copies and unique attachment
+preserve both script and flag, alongside case and unrelated lib values.</p>
+<p>Changing Unicode alone does not change script. Known-name changes refresh an
+unstored script; missing-name records preserve the previous value. Detached
+true-to-false reset and attached reset without a metadata record refuse before
+mutation. Custom managers, synthesized names and full <code>updateGlyphInfo</code> fidelity
+remain open. This contract follows retained upstream source analysis; native
+history and save/reopen still require verification with installed artifacts.</p>
+<p>Owned offline example:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fly.gp.model</span><span class="w"> </span><span class="kn">import</span> <span class="n">GSGlyph</span>
+
+<span class="n">glyph</span> <span class="o">=</span> <span class="n">GSGlyph</span><span class="p">(</span><span class="s2">"A"</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">glyph</span><span class="o">.</span><span class="n">script</span> <span class="o">==</span> <span class="s2">"latin"</span>
+<span class="n">glyph</span><span class="o">.</span><span class="n">script</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="k">assert</span> <span class="n">glyph</span><span class="o">.</span><span class="n">script</span> <span class="ow">is</span> <span class="kc">None</span>
+<span class="n">glyph</span><span class="o">.</span><span class="n">storeScript</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">glyph</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">"Alpha"</span>
+<span class="k">assert</span> <span class="n">glyph</span><span class="o">.</span><span class="n">script</span> <span class="ow">is</span> <span class="kc">None</span>  <span class="c1"># Stored None survives the known-name change.</span>
+</code></pre></div>
+<h3 id="classification-and-shared-resolver">Classification and shared resolver</h3>
+<p>The source candidate now supports independent <code>category</code>, <code>subCategory</code>,
+<code>storeCategory</code> and <code>storeSubCategory</code> values. Classification accepts strings,
+including the empty string, or <code>None</code>. Assigning Unicode alone does not refresh
+classification. Turning an enabled storage flag off refreshes only that field;
+a flag already off is a no-op. Detached resets remain explicitly unsupported.</p>
+<p>Case, script and classification resets share Unicode-first resolution. For an
+<code>A</code> encoded as <code>0061</code>, case resets to lowercase; for <code>0A15</code>, script resets to
+Gurmukhi. The first resolvable encoding wins, including synthesized metadata:
+an unassigned <code>0378</code> prevents a later <code>0A15</code> from supplying Gurmukhi metadata,
+while <code>10FFFF</code>, which yields no record, allows the next encoding to be tried.
+The <code>Icon</code> and <code>SF-Symbol</code> categories use the audited keep-name path.</p>
+<p>These are owned offline checks against retained upstream analysis, not native
+measurements. Custom data, full ROS mapping, complex small-cap mapping
+and language suffixes remain unqualified. Arabic presentation settings and
+additional encodings now follow the
+audited helper gates; native workflow acceptance remains open. Earlier artifact hashes and examples above identify their
+historical, narrower candidates; they do not identify this source revision.</p>
+<p>Additional-Unicode refresh uses a bundled public Unicode17 scalar map, matching
+macOS27.2 NSString.lowercaseString across all1,112,064 valid scalars. The helper
+uses pre-apply case/script and staged name/codes; opposite-case ownership, Greek
+sentinels, U+0130, dotless I, keep-name and detached Arabic paths remain distinct.
+It does not promote legacy-only .isol data. This pins the measured casing version;
+older/future Foundation equivalence and full custom-manager/ROS routes
+and native history/persistence remain unqualified. Unicode licence/provenance
+ship with the package; no Objective-C bridge is introduced at runtime.</p>
+<p><code>GSGlyphInfo</code> has a source-qualified <a href="../production-metadata/">stored production field</a>
+and <a href="../glyph-descriptions/">selected-record description</a>. Descriptions preserve
+nullable stored text without Unicode-name synthesis. Anchors, direction and other
+native metadata remain incomplete; matching subsets do not establish complete records.
+The public unicodeLegacy property now preserves separate maintained legacy
+encodings in owned read-only snapshots. Requested shipped ROS maps explicitly
+refuse when their proprietary mapping data is required; no substitute map ships.
+See <a href="../legacy-and-ros/">legacy encodings and ROS</a> for examples and exact boundaries.
+Custom global/document-local data overrides and synthesis need a coherent lookup
+contract; a direct glyphsLib production-name call does not supply that contract.
+Missing dependencies must remain distinguishable from genuine database misses.
+The audit itself changed no runtime behavior; the subsequent default-lookup
+repair above changes only the public application method.</p>
+<p>Return to the <a href="../../">current installation and compatibility overview</a>.</p>
+<p>This reference preserves the pre-cleanup README from revision <code>161efe3</code>.
+First-slice status statements, native acceptance counts and revision references
+below describe historical checkpoints; they do not establish current or complete
+Glyphs conformance. The current README governs installation, backend selection
+and overall limits. Detailed implementation notes and retained evidence remain
+useful when interpreting older reports. <code>WORK.md</code> and workspace issue/evidence
+paths mentioned below are checkout records, not additional distributed files.</p>
+<p>Glyphs script and plugin compatibility for FontLab, developed in
+<a href="https://github.com/fontlabcom/fontlab-glyport">fontlabcom/fontlab-glyport</a>.
+The Python namespace is <code>fontlab_glyport</code>.</p>
+<p>This repository owns the Glyphs model adapters, automatic source/import
+adaptation, plugin lifecycle, and dynamic Cocoa/Vanilla-to-Qt translation.
+Shared FontLab controls belong to Fontlabapp; PySide2 behavior belongs to
+Pythonqtside. The expanded ecosystem specification is <code>issues/101.md</code> in the
+parent workspace.</p>
+<p>Current implementation: read-only script/bundle inspection, execution receipt
+records, typed errors, cached Python 2 source adaptation and owned Python execution
+scopes, plus the first R019–R022 live model slice. Native verification is pending.
+An assessment records requirements; it does
+not establish runtime compatibility. Source originals are never executed or
+modified during inspection. Relative imports and computed runtime imports need
+later dependency resolution; the inspector reports that limitation.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fly.gp</span><span class="w"> </span><span class="kn">import</span> <span class="n">inspect_source</span>
+
+<span class="n">assessment</span> <span class="o">=</span> <span class="n">inspect_source</span><span class="p">(</span><span class="s2">"OriginalScript.py"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">assessment</span><span class="o">.</span><span class="n">required_capabilities</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">assessment</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span>
+</code></pre></div>
+<p>Use the genuine reviewed App checkout and clear inherited SCM pretend-version
+variables first (DEPENDENCIES.md). The tracked lock is stale.</p>
+<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>run<span class="w"> </span>--no-config<span class="w"> </span>--python<span class="w"> </span>cpython-3.11-macos-aarch64-none<span class="w"> </span>--no-project<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--with<span class="w"> </span>pytest<span class="w"> </span>--with-editable<span class="w"> </span>../fontlab-fontlabapp<span class="w"> </span>--with-editable<span class="w"> </span>.<span class="w"> </span>pytest<span class="w"> </span>-q
+uv<span class="w"> </span>run<span class="w"> </span>--no-config<span class="w"> </span>--python<span class="w"> </span>cpython-3.11-macos-aarch64-none<span class="w"> </span>--no-project<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--with-editable<span class="w"> </span>../fontlab-fontlabapp<span class="w"> </span>--with-editable<span class="w"> </span>.<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>python<span class="w"> </span>-m<span class="w"> </span>fontlab_glyport<span class="w"> </span>inspect<span class="w"> </span>OriginalScript.py<span class="w"> </span>--json<span class="w"> </span>assessment.json
+uv<span class="w"> </span>build<span class="w"> </span>--no-config
+</code></pre></div>
+<p>Profiles are <code>auto</code>, <code>glyphs2</code>, <code>glyphs3</code>, and <code>glyphs4</code>. Inspection records
+declarations, API minima and simple version rejection guards. Unresolved <code>auto</code>
+executes as <code>glyphs4</code>; conflicting evidence requires an explicit profile.
+Compatibility version values describe that profile, not FontLab's version or
+a claim of complete Glyphs conformance.
+The <code>glyphs4</code> reference profile reports <code>versionNumber=4.1</code>,
+<code>versionString="4.1.1"</code> and <code>buildNumber=4108</code> from shared version metadata.</p>
+<p>The assessment includes original SHA-256 file identities, import locations,
+SDK protocol declarations, bundle principal class, Python entry points and
+resource requirements. Symlinks retain their link identity and are not followed
+by inspection. Bundles without Python remain visible and require native support.
+The CLI creates a new report file and refuses to overwrite an existing output.</p>
+<h2 id="ordinary-glyphs-imports-in-fontlab">Ordinary Glyphs imports in FontLab</h2>
+<p>At the start of a Python 3 script running on FontLab's GUI thread, add:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fly</span><span class="w"> </span><span class="kn">import</span> <span class="n">gp</span><span class="p">;</span> <span class="n">gp</span><span class="o">.</span><span class="n">activate</span><span class="p">()</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">GlyphsApp</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">AppKit</span><span class="o">,</span><span class="w"> </span><span class="nn">Foundation</span><span class="o">,</span><span class="w"> </span><span class="nn">vanilla</span>
+</code></pre></div>
+<p>Place activation after any <code>from __future__</code> statements, as Python requires.
+The remaining script uses ordinary Python imports in its own namespace. This
+uses the existing native adapters and supplies GlyphsApp exports (including bare
+<code>Glyphs</code>) in the caller script globals. Legacy menu scripts also receive
+<code>Font</code>, a snapshot of <code>Glyphs.font</code> when that caller activates (or <code>None</code>). <code>activate(namespace=globals())</code> makes the
+target explicit. Existing conflicting globals are refused; cleanup removes only
+names added by activation that the script has not since replaced. It does not
+rewrite source. Use <code>run_script</code> for source adaptation/dependency routing.</p>
+<p>Activation defaults to <code>glyphs4</code>; <code>activate(profile="glyphs3")</code> selects another
+explicit profile. Repeated activation returns the same retained handle. Call
+<code>gp.deactivate()</code> (or <code>handle.close()</code>) when finished with callbacks
+and windows. Cleanup is idempotent. Activate/deactivate outside a running scoped
+execution or callback. Scoped runs can execute while activation is retained.
+Existing foreign GlyphsApp/Cocoa/Vanilla compatibility modules are refused to
+protect another host; recognised native PyObjC modules can be preserved or
+temporarily masked by the selected backend; unrelated imports and caller-installed replacements survive cleanup.
+No global builtins patch or persistent execution lock is installed. Unit tests
+cover import/lifecycle contracts; native acceptance is a separate required gate.</p>
+<p>Glyph category/subCategory reads use the maintained GlyphData included with the
+declared <code>glyphsLib</code> dependency. This covers spacing marks and unencoded named
+alternates. Glyph case uses the separate Glyph Info case classification.
+An incomplete dependency installation raises an explicit error.</p>
+<h2 id="python-2-source-adaptation-r016r017">Python 2 source adaptation (R016/R017)</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fly.gp</span><span class="w"> </span><span class="kn">import</span> <span class="n">adapt_source</span>
+
+<span class="n">adapted</span> <span class="o">=</span> <span class="n">adapt_source</span><span class="p">(</span><span class="s2">"OriginalScript.py"</span><span class="p">,</span> <span class="n">profile</span><span class="o">=</span><span class="s2">"glyphs2"</span><span class="p">,</span> <span class="n">cache_dir</span><span class="o">=</span><span class="s2">".glyport-cache"</span><span class="p">)</span>
+<span class="n">code</span> <span class="o">=</span> <span class="n">adapted</span><span class="o">.</span><span class="n">compile</span><span class="p">()</span>  <span class="c1"># original filename; compilation does not execute</span>
+<span class="n">location</span> <span class="o">=</span> <span class="n">adapted</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># generated to original, one-based characters</span>
+</code></pre></div>
+<p>Original bytes are read and never changed. Artifacts live under the owned
+<code>cache_dir/fontlab-glyport</code> namespace, keyed by original SHA-256, profile and
+<code>PIPELINE_VERSION</code> (including the installed fissix version). Completed entries
+are published from staging directories; hits verify artifact hashes and skip
+transformation. Corrupt entries fail explicitly. Keep originals outside this
+owned namespace. Profiles select cache identities; all use the same syntax rules.
+Source accepted by Python 3.11's AST parser passes through byte-for-byte with
+zero adaptations, including Python 2 builtin names that are also valid syntax.</p>
+<p>Ordered <code>Adaptation</code> receipt records cover <code>py2.print_statement</code>, <code>except_comma</code>,
+<code>exec_statement</code>, <code>backticks</code>, <code>ne_diamond</code>, <code>raise_tuple</code>, <code>dict_iter</code>, <code>xrange</code>,
+<code>long_literal</code>, <code>octal_literal</code>, <code>unicode_literals</code>, <code>unicode_builtin</code> and
+<code>integer_division</code> (each has the <code>py2.</code> prefix). Each records its reason, input
+and output byte hashes, and an external JSON <code>SourceMap</code>. Maps cover every
+generated character using one-based Unicode columns and exclusive span ends;
+unchanged characters preserve positions and replacements conservatively map
+to the original edited span. Stage maps and the final map point directly to
+the original, rather than the previous stage. EOF has no character span.
+Absolute map paths are private receipt facts; alias/copy them before publishing
+a public receipt. <code>AdaptationError.location</code> uses original path/line/column.</p>
+<p>Classic <code>/</code> becomes <code>_glyport_div(left, right)</code>: integer operands floor (including
+negative integers and bool), mixed/float operands use true division. Evaluation
+order and associativity are preserved. Future <code>division</code> bypasses rewriting.
+The helper import respects encoding cookies, docstrings and future imports;
+bindings of its reserved name fail explicitly. Python 2 <code>/=</code> needs manual
+adaptation and fails, unless future division applies. No host/UI imports occur.</p>
+<p>Strings stay text; <code>PY2_STRING_AMBIGUITY</code> requests byte-operation review.
+Fissix preserves ordinary trailing-comma/redirection prints, exception binding,
+explicit-namespace exec, dict key-list snapshots and iterator APIs. It does not
+emulate Python 2 hash-table iteration order, print softspace edge cases,
+function-local implicit exec, exception-variable survival after handlers,
+custom <code>__div__</code> coercion, or all shadowed builtin/method names. Diagnostics
+request semantic review. Raw-unicode <code>ur</code> escapes require review and receive
+<code>PY2_RAW_UNICODE_REVIEW</code>; conversion to raw text does not reproduce their
+Unicode escape interpretation. This pipeline is source adaptation, not a
+complete Python 2 interpreter or proof of host compatibility.</p>
+<h2 id="execution-receipts-and-errors">Execution receipts and errors</h2>
+<p><code>Receipt</code> and its frozen sub-records describe schema version 1 independently of
+FontLab. <code>receipt.to_dict()</code> returns fresh JSON objects/arrays;
+<code>validate_receipt(data)</code> returns structural errors (an empty list means valid).
+<code>write_receipt(receipt, path)</code> validates and writes UTF-8 JSON, refuses existing
+files (including links), and cleans up staging files on failure. It uses a
+temporary file and replace, then an exclusive hard link for atomic publication
+without overwrites, including concurrent writers. The destination filesystem
+must support hard links. Validation does not establish native behavior.</p>
+<p>Version-one choices where R018 leaves representation open:</p>
+<ul>
+<li><code>schema_version</code> is integer <code>1</code>; other versions and identifiers are strings.
+  Unknown record keys are errors. Evidence is an array of nonempty strings.</li>
+<li>Artifacts and source maps use <code>sha256</code> for their hash key. <code>source_map</code> is
+  <code>{path, sha256}</code>, identifying an external generated-to-original span map;
+  this validator does not read that file or prescribe its internal format.</li>
+<li><code>not_applicable</code> requires <code>reason={role, reason}</code> and explicit
+  <code>requested=False</code>. Requested capabilities/stages default to <code>True</code>; unsupported
+  requested behavior belongs under <code>blocked</code> or <code>failed</code>.</li>
+<li>Nullable facts include repository/revision/source hash, environment values,
+  adapter profile, source map, artifact hash and stage times. Each null needs a
+  diagnostic whose <code>field</code> names it, e.g. <code>environment.qt</code> or
+  <code>stages[0].started_at</code>. Missing diagnostic context and unused role reasons
+  may be null without recursive diagnostics.</li>
+<li>Diagnostics use uppercase codes, <code>info|warning|error</code> severity, <code>location</code>
+  (<code>path</code>, one-based integer <code>line</code>/<code>column</code>), <code>capability</code>, <code>message</code> and
+  <code>recovery_action</code>. <code>ReceiptDiagnostic</code> is separate from assessment <code>Diagnostic</code>.</li>
+<li>Public validation/writing is the default: supply public aliases for private
+  identifiers and retain source-relative paths. Absolute/home paths in fields
+  or prose are rejected, not silently shortened. Arbitrary private identifiers
+  cannot be detected automatically. <code>public=False</code> permits private reports;
+  source <code>relative_path</code> and dirty-file keys must still be relative.</li>
+</ul>
+<p><code>GlyportError</code> subclasses are <code>HostUnavailable</code>, <code>UnsupportedCapability</code>,
+<code>AdaptationError</code>, <code>DependencyUnavailable</code>, <code>StaleNativeObject</code>,
+<code>NativeOperationError</code>, <code>Cancelled</code> and <code>PartialFailure</code>. <code>UnsupportedAttribute</code>
+subclasses both <code>UnsupportedCapability</code> and <code>AttributeError</code> for attribute reads. Each accepts a message
+and optional <code>location=SourceLocation(...)</code>, <code>capability</code> and <code>recovery_action</code>;
+<code>error.to_diagnostic()</code> returns a <code>ReceiptDiagnostic</code>. All are exported from
+<code>fontlab_glyport</code> without importing host/UI modules. <code>SystemExit</code> and
+<code>KeyboardInterrupt</code> propagate unchanged.</p>
+<h2 id="owned-execution-scopes-r017">Owned execution scopes (R017)</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fly.gp</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExecutionContext</span>
+
+<span class="n">context</span> <span class="o">=</span> <span class="n">ExecutionContext</span><span class="p">(</span><span class="s2">"scripts"</span><span class="p">,</span> <span class="s2">"glyphs3"</span><span class="p">,</span> <span class="n">sink</span><span class="o">=</span><span class="nb">print</span><span class="p">)</span>
+<span class="n">stage</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">"scripts/main.py"</span><span class="p">)</span>
+<span class="n">callback</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">context</span><span class="o">.</span><span class="n">globals</span><span class="p">[</span><span class="s2">"callback"</span><span class="p">])</span>
+<span class="n">callback</span><span class="p">()</span>  <span class="c1"># restores the import scope and output route for this invocation</span>
+<span class="n">context</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>  <span class="c1"># idempotent; later activation is rejected</span>
+</code></pre></div>
+<p><code>context.on_close(hook)</code> registers a zero-argument hook. <code>close()</code> runs each
+hook once, newest first, while the context is still usable, then unloads. A
+failing hook, even one raising <code>SystemExit</code>, does not stop later hooks or the
+unload. Afterwards <code>close()</code> re-raises the first process exit or interrupt as
+is; otherwise it raises <code>PartialFailure</code>, whose message names each failure and
+whose <code>errors</code> tuple holds every hook exception in run order.
+Registering on a closed context raises <code>RuntimeError</code>. With no hooks, <code>close()</code>
+behaves as before.</p>
+<p><code>run</code> activates the context itself; use <code>with context:</code> for direct scoped imports
+through <code>context.import_module</code>. Nested activations and any second active context
+are rejected before registration, even for matching profiles. Contexts may be
+reused sequentially until closed. Sibling modules and packages, relative imports,
+and bundle <code>Contents/Resources</code> use a unique private namespace. Package metadata
+and original <code>__file__</code> paths support resource access. Each script runs with its
+folder as cwd; the caller's cwd is restored on success, error or process exit.
+Context-owned builtins and an <code>importlib</code> facade route ordinary imports and
+<code>import_module</code>; unrelated host code retains its own imports. Modules are retained
+outside <code>sys.modules</code> between activations, including for wrapped callbacks.</p>
+<p>The optional third argument maps module names to zero-argument module providers;
+additional names support optional dependency adapters. Defaults for GlyphsApp,
+its plugins/UI, vanilla, AppKit, Foundation, Cocoa and objc raise
+<code>UnsupportedCapability</code> on requested attributes with the original call location.
+They provide no native functionality. Supply <code>cache_dir</code> to adapt scripts and
+imported source using the existing pipeline. Execution infrastructure uses only
+the standard library; optional adaptation uses the existing fissix dependency.</p>
+<p>Fresh script globals are the default; <code>shared_globals=True</code> explicitly retains
+one context's dictionary across runs for a profile needing Macro-style sharing.
+<code>context.globals</code> exposes the latest dictionary. Host script globals are never
+used. <code>Output</code> sends stdout/stderr writes to the injected callable, or collects
+strings in <code>context.output.strings</code>; wrapped callbacks use the same route.
+A host must inject its actual Macro/Output destination; no native routing is
+claimed. <code>run</code> returns a receipt <code>Stage</code>, and records <code>SystemExit</code> in
+<code>exit_status</code> (nonzero exits fail the stage). Other exceptions propagate with
+<code>last_stage</code> retained; <code>KeyboardInterrupt</code> also propagates. Streams are restored.</p>
+<p>The active finder and private module entries are removed after success or error;
+pre-existing module-table values are restored and unrelated newly loaded host
+modules are retained. Failed scopes do not retain newly imported private modules.
+This is cooperative in-process scoping, not a security sandbox: mutations of
+existing module objects, external side effects and concurrent host threads are
+not rolled back or isolated. The lock serializes Glyport scopes only. Importing
+through host-held importer references can bypass the owned facade. Native/Qt
+profile coexistence is unimplemented; no Python subinterpreter safety is claimed.</p>
+<h2 id="live-model-r019r022-first-slice">Live model (R019–R022, first slice)</h2>
+<p>Import <code>Model</code> from <code>fontlab_glyport.model</code>; backend/helper imports are from <code>fontlab_glyport.model.fontlab_backend</code>.
+Native tests must use <code>pkg = owned_test_package(["A", "B"])</code> (retains <code>.package</code> and source <code>.fg_font</code>), then
+<code>model = Model(FontLabBackend(packages=[pkg]))</code>. Explicit scope never reads workspace fonts;
+its current font is the first valid supplied package. An empty scope stays empty.
+Omitting <code>packages</code> exposes workspace fonts. Reads fetch package facts, glyph metadata, or one layer.
+<code>model.fonts</code>/<code>model.font</code> expose the <a href="https://docu.glyphsapp.com/">Glyphs 3 subset</a>: fonts, masters, glyphs, layers and geometry.
+Width/node-position edits, path append/remove and anchor append use the backend.
+A master layer FontLab has not created yet (the <code>.notdef</code> of a new FontLab font has
+none) reads as empty with width 0; the first width, path or anchor write creates it
+natively (<code>findLayerCreate</code>) in the same change notification, and FontLab assigns
+its default width (250 observed) unless the write sets one. Reads never create layers.
+<code>glyph.layers</code> keeps masters first in font-master order, followed by ordinary
+native auxiliary layers in native order. Masks and service/interpolating layers
+are excluded from that foreground catalog. Master layer IDs equal master IDs;
+auxiliaries have their own stable session IDs and native names. FontLab has no
+associated-master metadata for ordinary auxiliaries, so Glyport maps them to the
+first existing master, following the <a href="https://docu.glyphsapp.com/#GSLayer.associatedMasterId">Glyphs default</a>,
+without changing native metadata. Their <code>isMasterLayer</code> remains false.
+Clearing a missing background is a read-only no-op, including on auto layers;
+clearing an existing auto-layer mask still refuses before any edit.
+Edits are published so that one Edit &gt; Undo reverts a whole <code>font.undo_group(name)</code>
+(or a single edit outside a group): before the first change to each layer FontLab
+is told its pre-change state, then the changed layers followed by their glyphs are
+notified once (a layer alone is skipped by Undo). This leaves one extra Undo step
+named like the group that restores the same state. What Undo restores is FontLab's
+choice: advance width, anchors and added/removed paths are restored, but node
+coordinates moved from Python (<code>node.position</code>, <code>layer.applyTransform</code>, <code>LSB</code>
+writes) are not, whatever is notified (<code>crash/R054-node-coordinates-not-undone.md</code>
+in the parent evidence). Known FontLab limitation: after
+Undo then Redo, undoing the next step also reverts the redone glyphs, and their
+redone state is lost (<code>crash/R054-redo-then-new-step-loses-redone-state.md</code> in the
+parent evidence).</p>
+<p><code>font.userData</code>, <code>glyph.userData</code> and <code>layer.userData</code> are dict-like views of the
+native libs (font: <code>packageLib["com.schriftgestaltung.Glyphs.fontUserData"]</code>;
+glyph/layer: their whole <code>lib</code>). Master userData excludes reserved parameter keys
+and preserves them when writing ordinary userData entries.</p>
+<p><code>font.customParameters</code> and <code>master.customParameters</code> preserve insertion order,
+duplicate names and active flags. Indexed reads return live parameter objects;
+name reads return the first active value, while name membership includes inactive
+objects. Name assignment updates the first matching object, retaining its active
+flag. Assigning <code>None</code> or deleting a name removes only the first match; deleting a
+missing/empty name is a no-op. Integer bounds are strict, including <code>insert</code>.
+<code>remove(parameter)</code> removes that object itself (by identity, as Glyphs'
+<code>removeObject_</code>), not the first parameter with its name; a parameter that is
+not in the collection raises <code>ValueError</code>.
+Iteration uses the initial count; shrinking during iteration can raise IndexError.</p>
+<p>An ordered lib sidecar holds persistent identities and values. Existing flat
+<code>com.schriftgestaltung.customParameter.GSFont.&lt;name&gt;</code> values migrate on the first
+write in their former sorted order; their original insertion order was never
+recorded. Flat keys mirror first-active values for glyphsLib readers. New external
+flat keys are imported. When an existing mirrored value is changed or removed
+outside glyport, the flat keys win: reads never fail, a changed value updates
+the effective (first active) parameter in place, a removed key drops that
+name's active parameters, and the next write persists the result. One
+<code>CUSTOM_PARAMETERS_REBUILT</code> warning goes to the execution receipt. The sidecar
+key <code>com.fontlab.glyport.orderedParameters.&lt;prefix&gt;</code> is stored in the font's
+lib and is saved and exported with it.
+Unrelated lib entries are preserved. The sidecar and mirrors remain separate from
+font/master userData. VFJ save/reopen and native history are still unqualified;
+lib integers have previously reopened as floats.</p>
+<p>Parameter name/value/active setters are supported. Names normalize only four
+curly quotes; nil names become empty strings. Empty-name objects remain available
+by index but are absent from keyed lookup/membership. Copies duplicate nested
+values and retain the parent pointer; inserted objects become live and removed
+objects detach. Nested mutation of an attached value container, same-object
+multiple insertion, cross-owner reparenting and complete native identity remain
+unqualified. The exact spaced Arabic presentation setting now has typed bool-schema
+conversion and resolver processing on the audited path. macOS strings use real
+Foundation parsing; non-macOS strings and arbitrary object conversion remain
+explicitly unsupported. Numeric values preserve their precision. Full ROS
+replacement, custom managers, native collision handling and complete original
+workflows remain open.
+See <a href="../arabic-presentation/">Arabic presentation examples</a>.</p>
+<p>The <a href="../custom-parameters/">ordered parameter example</a> runs against an owned offline
+model. <code>font.features</code> and <code>font.featurePrefixes</code> remain read-only snapshots
+(FontLab has one prefix, named "Prefix", and stores code with a trailing newline).</p>
+<p><code>font.axes</code> (name, axisTag, id = tag, hidden), <code>master.axes</code>/<code>internalAxesValues</code>
+and <code>font.instances</code> (name, axes, exports) are read-only snapshots; coordinates come
+from <code>axis.valueWeight(location)</code>. Unregistered owned packages expose no axes.</p>
+<p><code>font.kerning</code> is a live <code>{masterId: {left: {right: value}}}</code> mapping. Assign
+<code>font.kerning[master.id] = pairs</code> to replace a master's pairs, or <code>{}</code> to clear
+them; empty masters are omitted from reads. Pair keys are glyph ids or
+<code>@MMK_L_&lt;class&gt;</code>/<code>@MMK_R_&lt;class&gt;</code>. Nested mappings are read-only snapshots;
+assign the whole master mapping or use <code>setKerningForPair</code>/<code>removeKerningForPair</code>
+to edit. <code>kerningForPair</code> returns <code>None</code> for a missing explicit pair. Kerning is
+LTR only.</p>
+<p><code>glyph.rightKerningGroup</code>/<code>leftKerningGroup</code> read the currently selected master's
+FontLab class used on the pair's left (VFJ "1st") or right side, respectively.
+Assigning a group name updates membership across all independent-class masters;
+<code>None</code> or <code>""</code> clears membership. Shared class changes are refused before edits,
+including class cleanup during pair replacement; shared pair-only writes remain
+supported. Kerning writes use FontLab's own tools (<code>fontpr</code>): each native command
+has its own Undo step, outside any <code>undo_group</code>, with no aggregate atomic group.
+Independent-class commands can clear opaque native main-glyph references that
+the current host cannot expose; complete native metadata preservation is not
+established (FontLab issue 8519).</p>
+<p><code>layer.guides</code> reads guidelines (not hints, which FontLab
+also stores as guidelines) and accepts <code>GSGuide(position, angle, name)</code>;
+<code>layer.hints</code> are read-only PostScript stem/ghost records (FontLab hints are not
+node-linked, so <code>originNode</code> and friends raise).
+<code>font.classes</code> lists FontLab's OpenType classes (<code>fgFont.groups</code> entries with
+<code>isFeaGroup()</code>) as read-only <code>GSClass(name, code)</code> snapshots.</p>
+<p>Without explicit <code>packages</code>, <code>model.font</code> (and <code>Glyphs.font</code>) is FontLab's active
+font as FontLab's own tools report it (<code>flWorkspace.currentPackage</code> lags behind
+switches). Right after the active font closes FontLab may report no active font
+(then <code>model.font</code> is <code>None</code> until a font is activated) or already the remaining
+one; glyport reports what FontLab reports. Proxies of a closed font
+raise <code>StaleNativeObject</code>; other fonts' proxies stay valid. <code>node.selected</code> reads
+and writes the native selection flag (UI state: no undo step); <code>layer.selection</code>
+lists observable selected nodes/components (and anchors/guides where supported),
+as detailed in the public API review matrix.</p>
+<p><code>layer.name</code> is the master name for master layers. Ordinary foreground auxiliaries
+retain their backend name, including an empty string or <code>None</code>, without a fallback
+to the associated master. Copies preserve that value. This does not establish
+whether native Glyphs import preserves the distinction between absent and empty
+names; backgrounds retain their existing naming behavior. The nullable/custom
+name contract is described in the <a href="https://docu.glyphsapp.com/glyphs2/Core/Classes/GSLayer.html">Glyphs 2 native API</a>.
+<code>layer.bounds</code> (<code>origin</code>, <code>size</code>) comes from
+FontLab's <code>boundingBox</code> (an empty layer gives a zero rect); <code>LSB</code>/<code>RSB</code> derive from
+bounds and width. Writing <code>LSB</code> translates the outline natively (anchors move with
+it) and keeps RSB; writing <code>RSB</code> changes the width; both raise on an empty layer.
+<code>layer.applyTransform([a, b, c, d, tx, ty])</code> uses <code>flLayer.applyTransform</code>.
+Live/detached layer and path transforms, including the selection-aware layer
+selector, reject NaN/infinite coefficients before backend calls, history or
+geometry changes. Finite zero and negative scales keep their existing behavior.
+Python-managed path, detached-layer and selection-aware transforms calculate
+all point/component results before writes or history, so arithmetic overflow
+leaves earlier geometry untouched. Repeated draft objects are calculated once
+per occurrence, using the previous virtual result. Native whole-layer transforms and failures
+inside setters are not covered by that guarantee. This does not establish native
+transform/payload equivalence with Glyphs.
+Stored anchors accept <code>position</code>/<code>x</code>/<code>y</code> writes. <code>font.selectedFontMaster</code> is
+FontLab's current master; <code>disableUpdateInterface</code>/<code>enableUpdateInterface</code> are
+no-ops.</p>
+<p>With <code>fontlab_glyphsapp_provider</code>, <code>Glyphs.addCallback(fn, DOCUMENTOPENED)</code> and
+<code>DOCUMENTCLOSED</code> connect to FontLab's own document signals (<code>packageReaded</code>,
+<code>signalPackageClosed</code>); the callback's <code>notification.object()</code> is the event's
+<code>GSDocument</code> (None for a font outside the model's scope). FontLab emitted no signal
+for activation or saving through its MCP tools, so <code>DOCUMENTACTIVATED</code> and
+<code>DOCUMENTWASSAVED</code> stay unsupported. <code>ctx.close()</code> disconnects every slot.</p>
+<p><code>font.currentTab</code> is FontLab's active glyph tab when it shows this font (else
+<code>None</code>); <code>tab.text</code> reads and writes Glyphs text (characters, <code>/name</code> for
+unencoded glyphs, <code>\n</code> line breaks; unknown names or characters raise
+<code>ValueError</code> before anything is sent), <code>tab.layers</code> are the tab's glyphs in the
+tab's master. <code>font.newTab(text)</code> makes the font active and runs FontLab's "New
+Glyph Tab". <code>font.selectedLayers</code> are FontLab's current glyphs of this font.
+Empty lines in a tab are not reported back.
+<code>with font.undo_group("Edit"):</code> balances groups on exceptions; proxies retain identity.
+Imports are host-free; unsupported operations fail explicitly. See WORK.md for native verification.</p>
+<h2 id="glyphsapp-host-services-r026-first-slice">GlyphsApp host services (R026 first slice)</h2>
+<p><code>fontlab_glyport.glyphsapp.make_glyphsapp_module(model, bridge, error_sink=...)</code>
+returns a <code>GlyphsApp</code> module. Opt in per context with
+<code>ctx.adapters["GlyphsApp"] = glyphsapp_provider(model, bridge, wrap=ctx.wrap, error_sink=sink, on_close=ctx.on_close)</code>;
+without it the default placeholder still raises, and <code>GlyphsApp.plugins</code>/<code>GlyphsApp.UI</code>
+stay placeholders either way. <code>model</code> is a <code>fontlab_glyport.model.Model</code>. Every host
+effect goes through <code>bridge</code>, a <code>GlyphsBridge</code> protocol (<code>glyphsapp/bridge.py</code>).
+<code>FontLabGlyphsBridge</code> (below) is the FontLab 9 bridge; it is not natively
+verified yet. Tests use doubles, so nothing here is native evidence.</p>
+<p>Exports: <code>Glyphs</code>, the model classes (<code>GSFont</code>, <code>GSFontMaster</code>, <code>GSGlyph</code>,
+<code>GSLayer</code>, <code>GSPath</code>, <code>GSNode</code>, <code>GSAnchor</code>, <code>GSComponent</code>), the dialogs and these
+event constants with their Glyphs SDK values: <code>UPDATEINTERFACE</code>, <code>DRAWBACKGROUND</code>,
+<code>DRAWFOREGROUND</code>, <code>DRAWINACTIVE</code>, <code>MOUSEMOVED</code>, <code>MOUSEDOWN</code>, <code>MOUSEUP</code>,
+<code>DOCUMENTOPENED</code>, <code>DOCUMENTACTIVATED</code>, <code>DOCUMENTWASSAVED</code>, <code>DOCUMENTCLOSED</code>
+(<code>"GSDocumentWillCloseNotification"</code>, as in the SDK), <code>TABDIDOPEN</code> and <code>TABWILLCLOSE</code>.
+Any other module name or <code>Glyphs.&lt;member&gt;</code> (read or write) raises
+<code>UnsupportedCapability</code> located at the script line. Unknown reads on <code>Glyphs</code>
+and <code>currentDocument</code> raise its subclass <code>UnsupportedAttribute</code>, which is also
+an <code>AttributeError</code>, so <code>hasattr(Glyphs, "x")</code> is False and
+<code>getattr(Glyphs, "x", default)</code> returns the default. Unknown module names stay
+plain <code>UnsupportedCapability</code>, so <code>from GlyphsApp import X</code> keeps its
+capability and location instead of becoming an <code>ImportError</code>.</p>
+<p>Model proxies (<code>GSFont</code>, <code>GSGlyph</code>, <code>GSLayer</code> and the rest) follow the same
+rule: an unknown read such as <code>layer.syncMetrics</code> raises <code>UnsupportedAttribute</code>
+with its capability (<code>"GSLayer.syncMetrics"</code>) and script line, so corpus probes
+like <code>hasattr(layer, "smartComponentPoleMapping")</code> and
+<code>getattr(glyph, "color", None)</code> take their fallback. Unknown writes stay plain
+<code>UnsupportedCapability</code>. Property bodies on these classes are guarded: an
+<code>AttributeError</code> inside one surfaces as <code>UnsupportedCapability</code> naming the inner
+capability, not as a miss of the property, so <code>hasattr</code> on a supported member
+never silently returns False. Reading <code>.id</code> on an unattached draft (<code>GSNode()</code>)
+raises <code>UnsupportedCapability("GSNode.id")</code>.</p>
+<ul>
+<li><code>Glyphs.font</code>/<code>fonts</code> come from the model; <code>currentDocument</code> is <code>None</code> without
+  a current font, otherwise an object with only <code>.font</code>.</li>
+<li><code>versionNumber</code>/<code>buildNumber</code> are compatibility values the bridge reports.
+  They are not FontLab's version.</li>
+<li><code>showMacroWindow()</code>, <code>clearLog()</code>, <code>showNotification(title, message)</code> and
+  <code>redraw()</code> call the bridge, never <code>sys.stdout</code>.</li>
+<li><code>localize(value)</code> returns a string unchanged. For a dict it tries the
+  bridge's <code>ui_language()</code>, then its primary subtag (<code>de-CH</code> -&gt; <code>de</code>), then
+  <code>"en"</code>, then the first value; <code>{}</code> gives <code>""</code>.</li>
+<li><code>Message(message, title="Alert", OKButton=None)</code>, <code>AskString(message,
+  value=None, title="Glyphs", OKButton=None, placeholder=None)</code>,
+  <code>GetFolder(message=None, allowsMultipleSelection=False, path=None)</code>,
+  <code>GetOpenFile(message=None, title=None, allowsMultipleSelection=False,
+  filetypes=None, path=None)</code>, <code>GetFile</code> (SDK alias of <code>GetOpenFile</code> without
+  <code>path</code>) and <code>GetSaveFile(message=None, ProposedFileName=None, filetypes=None,
+  filetype=None)</code> return what the bridge answers. <code>GetSaveFile</code> also accepts the
+  current SDK spelling <code>proposedFileName=</code> (not both). A single <code>filetype</code> or a
+  string <code>filetypes</code> reaches the bridge as a one-item list.</li>
+</ul>
+<p>Defaults live in the <code>defaults=</code> mapping (default: one process-wide in-memory
+dict, like Glyphs' application-wide user defaults); nothing touches FontLab
+preferences or files. Keys must be <code>str</code> (<code>TypeError</code> otherwise).</p>
+<p>To persist defaults across sessions, pass
+<code>defaults=JsonFileStore(path)</code> (<code>fontlab_glyport.glyphsapp.defaults</code>): one JSON
+object in a file you choose, written atomically on every change. Values must be
+JSON; tuples are stored as lists and anything else raises <code>TypeError</code> before
+writing. A missing file reads as empty; a corrupt one raises <code>ValueError</code>. <code>fontlab_glyphsapp_provider</code>
+uses it by default at <code>~/Library/Application Support/FontLab/Glyport/defaults.json</code>
+(owner ruling; outside the FontLab 9 user folder), or at <code>$GLYPORT_DEFAULTS</code>; the
+file is created on the first write.</p>
+<ul>
+<li><code>Glyphs.defaults[key]</code> reads <code>None</code> when absent; assigning <code>None</code> or <code>del</code>
+  removes the key, and removing an absent key is harmless. <code>.get(key, default)</code>
+  works.</li>
+<li><code>registerDefault(key, value)</code> stores the value only when the key is absent.
+  A <code>None</code> key or value, or a key of two characters or fewer, raises <code>KeyError</code>
+  (as the SDK does). This is simpler than NSUserDefaults, which keeps registered
+  values in a separate domain: here a registered value is stored, so deleting it
+  does not bring it back.</li>
+<li><code>boolDefaults</code> reads <code>False</code> for a missing key, the value for a bool, nonzero
+  for a number, and, for a string, <code>True</code> when (after whitespace, a sign and
+  leading zeros) it starts with <code>Y</code>, <code>y</code>, <code>T</code>, <code>t</code> or <code>1</code>-<code>9</code>. Anything else is
+  <code>False</code>. It accepts only <code>bool</code> or <code>None</code> on write.</li>
+<li><code>intDefaults</code> reads <code>0</code> for a missing key. A bool gives 0 or 1, a finite
+  float is truncated toward zero, and a non-finite float gives 0. A string gives
+  its leading signed ASCII digits (<code>"3.7"</code> -&gt; 3, <code>"x1"</code> -&gt; 0). It accepts <code>int</code>,
+  <code>float</code> (stored truncated) or <code>None</code> on write.</li>
+</ul>
+<p><code>Glyphs.addCallback(fn, EVENT)</code> returns <code>None</code>. It accepts a constant or its
+raw string (<code>"GSUpdateInterface"</code>) and registers through <code>bridge.subscribe</code>,
+retaining one token per <code>(fn, event)</code>. Bound methods match by equality, so
+<code>removeCallback(self.update)</code> works. Adding the same pair again replaces the
+old registration, so there are no duplicates. An unknown event raises
+<code>UnsupportedCapability</code>, and a non-callable target raises <code>TypeError</code>.
+<code>removeCallback(fn[, event])</code> removes every matching registration through
+<code>bridge.remove</code> exactly once. Unknown or repeated removals do nothing. A token
+whose <code>bridge.remove</code> raises is kept, so a later removal can retry it.
+Callbacks run through <code>wrap</code> when given and receive the bridge's arguments.
+Exceptions, including a closed context's <code>RuntimeError</code>, go to
+<code>error_sink(exc, event)</code>. An exception raised by <code>error_sink</code> itself
+propagates into the host's dispatch. <code>localize</code> returns <code>str(value)</code> for
+anything that is neither a string nor a dict, as the SDK does. With
+<code>on_close=ctx.on_close</code>, the first <code>addCallback</code> registers
+<code>Glyphs._remove_all_callbacks</code> as a close hook, so <code>ctx.close()</code> removes every
+callback once, including those of a module re-imported after a failed run.
+Without <code>on_close</code>, a host tears down with <code>module.Glyphs._remove_all_callbacks()</code>.
+It attempts every token, keeps any whose <code>bridge.remove</code> raised and re-raises
+the first process exit, otherwise the first failure. The hook is consumed when
+it runs, so an <code>addCallback</code> after <code>ctx.close()</code> is rejected by the closed
+context and subscribes nothing. DRAW* events are only subscription contracts here: R026 routes painting
+through <code>register_painter</code>, and nothing draws yet.</p>
+<h3 id="fontlab-bridge-glyphsappfontlab_bridgepy">FontLab bridge (<code>glyphsapp/fontlab_bridge.py</code>)</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fly.gp.glyphsapp.fontlab_bridge</span><span class="w"> </span><span class="kn">import</span> <span class="n">fontlab_glyphsapp_provider</span>
+
+<span class="n">ctx</span><span class="o">.</span><span class="n">adapters</span><span class="p">[</span><span class="s2">"GlyphsApp"</span><span class="p">]</span> <span class="o">=</span> <span class="n">fontlab_glyphsapp_provider</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="p">(</span><span class="mf">3.2</span><span class="p">,</span> <span class="mf">3234.0</span><span class="p">))</span>
+</code></pre></div>
+<p>This builds <code>Model(FontLabBackend(packages))</code>, a <code>FontLabGlyphsBridge</code> and the
+module provider in one call. Bridge diagnostics and callback errors go to
+<code>ctx.output</code>. <code>ctx.close()</code> removes every callback first and then closes the
+bridge. <code>version</code> is the compatibility <code>(versionNumber, buildNumber)</code> that
+scripts see; no value is pinned yet, so the caller must choose it. Extra
+keywords go to the bridge. Native modules load on first use only. Use the
+bridge on the GUI thread.</p>
+<ul>
+<li><strong>Output.</strong> <code>print</code> already goes to the context sink.
+  <code>showMacroWindow()</code>/<code>clearLog()</code> do nothing by default, because FontLab's
+  Output panel is user content. With <code>output_panel=True</code> they call
+  <code>MainWindow.doShowOutputPanel()</code>/<code>doClearOutput()</code>, and raise
+  <code>HostUnavailable</code> when there is no main window.</li>
+<li><strong>Notifications.</strong> <code>showNotification</code> posts a 5 s status-bar message, never a
+  dialog. Without a main window it writes to the log.</li>
+<li><strong>Redraw.</strong> <code>redraw()</code> calls <code>fontlab.UpdateActiveCanvas()</code>, a view refresh
+  without model change notifications.</li>
+<li><strong>Callbacks.</strong> Only <code>UPDATEINTERFACE</code> is supported. One owned <code>QTimer</code>
+  (250 ms) polls <code>(current package id, current glyph id)</code> and calls each
+  callback once per change, with one argument: a <code>Notification</code> that has
+  <code>name()</code> and <code>object()</code> (always <code>None</code>). The stubs show no native signal for
+  other events, <code>DOCUMENTACTIVATED</code> included, so they raise
+  <code>UnsupportedCapability</code> named <code>Glyphs.addCallback.&lt;event&gt;</code>. Removing the last
+  callback disconnects the slot, then stops the timer and calls <code>deleteLater</code>;
+  if the disconnect fails, the timer keeps running and the token is kept.
+  A removal or <code>ctx.close()</code> made inside a callback only drops tokens; the
+  timer is torn down after the callback round returns, never inside the
+  emitting slot. Removing an issued token again does nothing (R026). A failure
+  stays inside the timer slot and is logged, process exits included. The first
+  subscription logs one <code>[GlyphsApp bridge]</code> line stating the narrower trigger.</li>
+<li><strong>Dialogs.</strong> <code>Message</code> shows a non-modal <code>QMessageBox</code> and returns at once.
+  Unlike Glyphs, where <code>Message</code> blocks until dismissed, script code after it
+  keeps running. Boxes the user has closed are released on the next <code>Message</code>;
+  the rest are closed by <code>bridge.close()</code>. <code>AskString</code>, <code>GetFolder</code>, <code>GetOpenFile</code>/<code>GetFile</code> and
+  <code>GetSaveFile</code> return injected <code>answers={"ask_string": ...}</code> first. A <code>None</code>
+  answer means cancel. Without an answer they run a modal <code>exec()</code> on an owned
+  Qt dialog, but only with <code>interactive=True</code>; otherwise they raise
+  <code>UnsupportedCapability</code> at the script line. <code>AskString</code> ignores <code>placeholder</code>.</li>
+</ul>
+<h2 id="vanilla-ui-first-slice">Vanilla UI (first slice)</h2>
+<p><code>fontlab_glyport.ui.vanilla.make_vanilla_module(qt, error_sink=...)</code> returns a
+<code>vanilla</code> module that builds real Qt widgets. <code>qt</code> is an injected namespace
+exposing <code>QtCore</code> and <code>QtGui</code>; FontLab's PythonQt keeps widgets in <code>QtGui</code>, and
+nothing here imports a Qt binding. To opt in, call
+<code>ExecutionContext(root, "glyphs3", {"vanilla": vanilla_provider(qt, sink)})</code>.
+Without this mapping, the default placeholder still raises.</p>
+<p>The module exports exactly <code>Window</code>, <code>FloatingWindow</code> (tool window), <code>Group</code>,
+<code>TextBox</code>, <code>EditText</code>, <code>Button</code>, <code>CheckBox</code>, <code>PopUpButton</code>, <code>Slider</code>,
+<code>HorizontalLine</code> and <code>VerticalLine</code>, plus the slice 2 controls listed below.
+Any other name, unsupported keyword or
+<code>bind</code> event raises <code>UnsupportedCapability</code>. <code>sizeStyle</code> is accepted and only
+recorded. Assigning a control to a window or group attribute parents its widget.
+It also records a node in the window's versioned <code>UIGraph</code> (<code>window.graph</code>).
+Every callback records a <code>Connection</code>. Layout follows <code>resolve_frame</code> and is
+recomputed when the window is resized.</p>
+<p>Callbacks receive the vanilla control as sender. Their exceptions go to
+<code>error_sink(exc, sender)</code>, and programmatic <code>set()</code> does not fire them. Sliders
+map floats onto an integer Qt slider with <code>SLIDER_STEPS</code> (1,000,000) steps.
+<code>close()</code> and the title-bar close button take the same path. Close binds fire
+once, every tracked signal connection is disconnected, and then the window
+closes and <code>deleteLater()</code> runs. Open windows stay referenced until they are
+closed. <code>getNSView()</code> returns the Qt widget as a compatibility handle.</p>
+<p>To make callbacks follow the context's Output and imports, including callbacks
+that fire after <code>run()</code> returns, register
+<code>ctx.adapters["vanilla"] = vanilla_provider(qt, sink, wrap=ctx.wrap)</code>. A
+callback that fires after the context has closed reports its error to the sink.
+Add <code>on_close=ctx.on_close</code> and <code>ctx.close()</code> closes every window the module
+still has open (close binds run inside the context first). Hooks run newest
+first: vanilla registers at import, <code>GlyphsApp</code> at the first <code>addCallback</code>, so
+Glyphs callbacks are removed before windows close when imports come first
+(R027). A script that adds callbacks before importing vanilla reverses this.</p>
+<p>Reassigning an attribute or running <code>del w.ok</code> retires the old control: its
+connections are disconnected, its widget is unparented and <code>deleteLater</code> runs.
+Its graph nodes (including a group's subtree) are kept but marked
+<code>"detached": True</code>. See WORK.md for the native acceptance checklist.</p>
+<p>Slice 2 adds the most frequent keywords and methods on these objects:</p>
+<ul>
+<li>Every control has <code>setToolTip(text)</code>.</li>
+<li><code>TextBox</code> and <code>EditText</code> take <code>alignment="left"|"center"|"right"|"natural"|"justified"</code>
+  (<code>natural</code> means left). Each value maps to the matching horizontal Qt flag
+  combined with <code>AlignVCenter</code>, which is the Qt default for both widgets. Any
+  other value raises <code>UnsupportedCapability</code> (<code>vanilla.TextBox.alignment.&lt;value&gt;</code>).
+  <code>TextBox(selectable=True)</code> lets the user select the text with the mouse and
+  the keyboard.</li>
+<li><code>Window</code> and <code>FloatingWindow</code> gain <code>makeKey()</code> (raise and activate), <code>center()</code>
+  (centre on the available geometry of the screen showing the window; it centres
+  the client geometry, as <code>getPosSize</code> does, so the window deliberately sits about
+  half a title bar low) and
+  <code>getNSWindow()</code>, which returns the top-level Qt widget as a compatibility handle.</li>
+<li><code>setDefaultButton(button)</code> accepts a push <code>Button</code>: Return or Enter clicks it
+  while it is enabled, visible and still attached to that window. A button that
+  is not attached to this open window (detached, retired, inside a deleted group,
+  or in another window) raises <code>ValueError</code>, and its widget is never touched.
+  Plain Qt widgets have
+  no dialog default-button handling, so the window widget routes the key itself.
+  Setting a new default clears the previous one.</li>
+<li><code>autosaveName="name"</code> restores the window's last <code>[x, y, w, h]</code> frame for that
+  name on construction. The frame is saved again whenever the window is
+  resized, centred or closed. Frames are stored under <code>"window:&lt;name&gt;"</code> in the
+  <code>settings</code> mapping passed to <code>make_vanilla_module(..., settings=...)</code> or
+  <code>vanilla_provider(..., settings=...)</code>. By default this is an in-memory dict
+  shared by every module in the process. Nothing is written to FontLab
+  preferences or files. A malformed stored value is ignored, including
+  non-finite numbers and a zero or negative width or height.</li>
+</ul>
+<p>Slice 2 also adds the next nine controls by corpus frequency (they live in
+<code>ui/vanilla_controls.py</code> and are exported from the same module). Programmatic
+<code>set()</code> stays silent unless noted.</p>
+<ul>
+<li><code>RadioGroup(posSize, titles, isVertical=True, callback=None)</code>: QRadioButtons
+  in an exclusive QButtonGroup. <code>get()</code>/<code>set()</code> use the index, and <code>-1</code> means
+  none. As with AppKit's radio-mode NSMatrix, the first title starts selected.
+  Rows are 18/15/12 px (<code>regular</code>/<code>small</code>/<code>mini</code>), 2 px apart. A horizontal
+  group splits the width equally.</li>
+<li><code>RadioButton(posSize, title, value=False, callback=None)</code>: a standalone radio.
+  It is not auto-exclusive, and clicking it always leaves it on, as in AppKit.
+  It is not a push button, so <code>setDefaultButton</code> rejects it.</li>
+<li><code>ComboBox(posSize, items, callback=None, continuous=False, completes=True)</code>:
+  an editable QComboBox. <code>get()</code>/<code>set()</code> use the text, and it starts empty.
+  <code>setItems()</code> replaces the choices and keeps the text. Typed text is never
+  added to the list. The callback fires only for the user: a popup pick
+  (<code>activated</code>) always fires it. With <code>continuous=True</code>, each keystroke fires it
+  too (<code>textEdited</code>). Otherwise typed text fires it once per commit, on Return
+  or on focus loss after an edit. Qt 5.15 emits <code>editingFinished</code> on every
+  focus loss, so the line edit's <code>isModified()</code> flag gates the commit and is
+  then cleared. Return on text that matches an item fires once, through Qt's
+  own <code>activated</code>. <code>set()</code>, <code>setItems()</code> and a direct <code>setCurrentIndex()</code> never
+  fire it.</li>
+<li><code>TextEditor(posSize, text="", callback=None, readOnly=False, checksSpelling=False)</code>:
+  a QPlainTextEdit. Every user edit fires the callback. <code>checksSpelling</code> is only
+  recorded, because Qt has no spell checker here.</li>
+<li><code>SquareButton</code> is a push <code>Button</code>. <code>HelpButton(posSize, callback=None)</code> is a
+  push button titled <code>?</code>; <code>page</code>/<code>anchor</code> are unsupported.</li>
+<li><code>ProgressBar(posSize, minValue=0, maxValue=100, isIndeterminate=False)</code>: the
+  float value is clamped to the range and shown on a 0..<code>SLIDER_STEPS</code> Qt range.
+  <code>set</code>, <code>increment(value=1)</code> and <code>get</code> work, and each update repaints so loops
+  show progress. <code>start()</code>/<code>stop()</code> switch an indeterminate bar to Qt's busy
+  indicator and back; on a determinate bar they do nothing.</li>
+<li><code>Box(posSize, title=None)</code>: a QGroupBox that takes child controls like
+  <code>Group</code>. Children are laid out inside a content widget placed on the box's
+  <code>contentsRect()</code>, below the title. The content is refitted when the box is
+  first shown (the style polish moves <code>contentsRect</code> below the title), on
+  resize, and on <code>setTitle</code>. <code>setTitle</code>/<code>getTitle</code> work. <code>fillColor</code>, <code>margins</code> and similar raise.</li>
+<li><code>List(posSize, items, columnDescriptions=None, ...)</code>: a QTableWidget with
+  whole-row selection and no row numbers. Items are strings, or dicts keyed by
+  each column's <code>key</code> (default: its <code>title</code>). Dicts are copied, so edits change
+  the List's own dict, and <code>get()</code> returns those dicts. Column descriptions
+  accept <code>title</code>, <code>key</code>, <code>editable</code> and <code>width</code>; <code>cell</code> and anything else raise,
+  and so does <code>vanilla.CheckBoxListCell</code>. A column is editable when
+  <code>editable=True</code>, or when <code>editCallback</code> is given and <code>editable</code> is unset.
+  Editing a cell stores the text and fires <code>editCallback</code>. A double click fires
+  <code>doubleClickCallback</code> only on a non-editable cell, because AppKit edits the
+  cell instead. <code>selectionCallback</code> fires on user selection and on
+  <code>setSelection()</code>, which vanilla also reports. <code>list[i]</code> and slices
+  (<code>list[1:3]</code>) return items. <code>set</code>, <code>append</code>, <code>extend</code> and
+  <code>remove</code> are silent. <code>enableDelete=True</code> lets Delete or Backspace remove the
+  selected rows. <code>allowsEmptySelection=False</code> only selects row 0 at
+  construction. <code>drawFocusRing=False</code> turns off the macOS focus rect. The graph
+  records the columns and the item count, never the items.</li>
+</ul>
+<h2 id="runtime-entry-points-r006-r015-r033-r048">Runtime entry points (R006, R015, R033, R048)</h2>
+<p><code>fontlab_glyport.run_script(path, profile="auto", font=None, options=None, host=None)</code>
+and <code>install_plugin(bundle, ...)</code> return handles (<code>id</code>, <code>state</code>, <code>windows</code>,
+<code>context</code>, snapshot <code>receipt</code>, <code>wrap</code>, <code>close</code>, <code>invalidate_document</code>; plugins add
+<code>unload</code>). Profiles <code>glyphs2</code>/<code>glyphs3</code>/<code>glyphs4</code> are chosen from source/bundle
+metadata unless given. The default FontLab host dispatches on the GUI thread, wires
+the Vanilla provider and <code>fontlab_glyphsapp_provider</code>, and accepts an explicit
+<code>OwnedPackage</code> font. Document invalidation is explicit: a host that binds a
+workspace font can subscribe <code>DOCUMENTCLOSED</code> and call <code>handle.invalidate_document()</code>
+(the default host binds only unregistered owned packages, which FontLab never
+closes). Owned scripts get a scoped <code>subprocess.run</code> (explicit timeout, captured
+text) and HTTP helpers with an overall deadline and cancellation; pyc files must
+match the host's magic; ZIP entry points need <code>__main__.py[c]</code>.
+<code>python -m fontlab_glyport verify --manifest MATRIX --native --output DIR</code> writes a
+report and one private R018 receipt per row (<code>initial-regression</code> scope; corpus
+targets stay blocked). Native drivers and details: <code>native-drivers/README.md</code>.</p>
+<h2 id="cocoa-vanilla-remainder-and-nibxib-r029r031">Cocoa, Vanilla remainder and NIB/XIB (R029–R031)</h2>
+<ul>
+<li><code>vanilla.dialogs</code> (<code>ui/dialogs.py</code>): <code>message</code> (non-modal), <code>askYesNo</code>,
+  <code>askYesNoCancel</code>, <code>getFile</code>, <code>getFolder</code>, <code>putFile</code>; results come from injected
+  answers or, with <code>interactive=True</code>, a modal <code>exec()</code>; otherwise the call raises
+  <code>UnsupportedCapability("vanilla.dialogs.&lt;name&gt;")</code> at the script line.</li>
+<li><code>vanilla.Tabs</code> (QTabWidget pages) and <code>vanilla.Sheet</code> (window-modal child; the
+  parent closes its sheets first). Native handles: <code>_nsObject</code>, <code>getNSTextField</code>,
+  <code>getNSButton</code>, <code>getNSSlider</code>, <code>getNSPopUpButton</code> return Cocoa wrappers over the
+  same widget; <code>EditText.nsTextFieldClass = objc.lookUpClass("GSSteppingTextField")</code>.</li>
+<li><code>objc</code> (<code>ui/objc_bridge.py</code>): <code>python_method</code>, <code>IBOutlet</code>, <code>IBAction</code>, <code>super</code>,
+  <code>selector</code>, <code>lookUpClass</code> (Qt-backed classes only), <code>error</code>,
+  <code>nosuchclass_error</code>, <code>nil</code>, <code>YES</code>, <code>NO</code>. AppKit layer (<code>ui/cocoa*.py</code>): NSView
+  (bottom-left frames, autoresizing), NSControl target/action, bindings <code>value</code>/
+  <code>enabled</code>/<code>hidden</code>/<code>selectedIndex</code>, NSTextField, GSSteppingTextField, NSButton,
+  NSSlider, NSPopUpButton, NSProgressIndicator, GSPaletteView, NSMenu/NSMenuItem.</li>
+<li>NIB/XIB (<code>ui/nib_archive.py</code>, <code>nib_graph.py</code>, <code>nib_loader.py</code>): both compiled
+  NIB containers and XIB decode into the UI graph and instantiate with File's Owner,
+  outlets, actions and bindings. Corpus: 78/78 XIBs and 103/103 NIBs decode;
+  55/78 and 61/103 load with the current classes (NSImageView, NSStackView, NSBox,
+  window templates and resources are not done).</li>
+<li>Widget lists from Qt (<code>findChildren</code>, <code>children</code>) go through App's
+  <code>fontlabapp.qt.safe.qt_list</code> on the GUI thread (a garbage-collection race in
+  list conversion crashed FontLab).</li>
+</ul>
+<h2 id="plugins-and-editor-drawing-r025r027-r032">Plugins and editor drawing (R025–R027, R032)</h2>
+<p><code>GlyphsApp.plugins</code> has the seven SDK classes (<code>GeneralPlugin</code>,
+<code>FilterWithoutDialog</code>, <code>FilterWithDialog</code>, <code>ReporterPlugin</code>, <code>PalettePlugin</code>,
+<code>SelectTool</code>, <code>FileFormatPlugin</code>) bound to one plugin environment per execution
+context; <code>plugins.loader.load_plugin</code> registers a class with FontLab
+(<code>plugins/fontlab_host.py</code>: real menu QActions, tool windows for palettes and
+dialogs, file-format export items, editor painters) and <code>unload()</code> removes every
+registration deterministically. On FontLab builds with native canvas hooks
+(<code>flCanvas.appendPythonPainter</code>, <code>flWorkspace.registerPythonTool</code>), backgrounds
+paint under the outlines and <code>SelectTool</code> plugins become FontLab tools (see
+"Native canvas painters and tools" below); older builds keep the R054 fallbacks
+(background as overlay, no tools). <code>Glyphs.menu[EDIT_MENU].append(item)</code> registers through the same
+host; the <code>*_MENU</code> constants are exported. Drawing (<code>drawing/</code>): NSColor,
+NSBezierPath, NSAffineTransform, NSGraphicsContext, NSFont/NSAttributedString on
+QPainter inside a paint scope; NSView <code>drawRect_</code> and mouse events; in the glyph
+editor a transparent overlay paints after FontLab's own layer, mapped with the
+native glyph and text-block transforms (&lt; 1 px from the native outline).</p>
+<p><code>glyphsapp/fontlab_session.py</code> joins everything per execution context:
+<code>FontLabPluginHost</code> gets a model adapter (selected layers, current font, layer
+snapshot/restore, undo groups) and the editor painters a layer resolver, so
+reporters and <code>Glyphs.addCallback(fn, DRAWFOREGROUND)</code> receive the model <code>GSLayer</code>
+shown. <code>DRAWBACKGROUND</code> paints under the outlines through the native
+<code>UnderOwner</code> painter; builds without <code>flCanvas.appendPythonPainter</code> fall back
+to an overlay above them (R054). <code>install_plugin(bundle)</code> runs the
+bundle and loads its principal class through <code>plugins.register_plugin</code> -&gt;
+<code>load_plugin</code>; <code>handle.unload()</code> removes it. <code>AppKit</code>/<code>Foundation</code>/<code>Cocoa</code> export
+the Qt-backed classes, NS constants, menus, drawing and event names next to the
+value types; unknown names still raise at the script line.</p>
+<p>Host notes (issue 122). The generic parts of this host are App code:
+<code>FontLabPluginHost</code> subclasses <code>fontlabapp.qt.menus.OwnedMenus</code>, and
+<code>drawing.editor.EditorPainters</code> subclasses
+<code>fontlabapp.qt.painting.editor.EditorPainters</code>. Glyport keeps only the Glyphs rules:</p>
+<ul>
+<li>Menus: only the <code>*_MENU</code> keys reach a FontLab menu (<code>PATH_MENU</code> is
+  "Contour"). Every other name, including <code>FILTER_MENU</code>, <code>APP_MENU</code> and a
+  literal title such as "Edit", goes to this host's own "Glyphs Plugins"
+  menu. Each host keeps its own menu, even when two hosts are open at once.
+  Registration is atomic: if the first NSMenuItem sync fails, the QAction and
+  its token are removed before the error re-raises.</li>
+<li>Teardown waits for App's zero-delay timer; nothing is disconnected or
+  deleted while one of the host's own signals dispatches. A filter dialog
+  disconnects its Cancel/Apply buttons first (<code>_defer(first=True)</code>), before
+  App closes and deletes the window. An error from <code>on_close(applied)</code> goes
+  to the error sink with the plugin view as owner.</li>
+<li>A missing main window is App's <code>qtsafe.MainWindowNotFound</code>; the host raises
+  <code>HostUnavailable</code>. The off-GUI-thread refusal stays a plain <code>RuntimeError</code>.</li>
+<li>Painters (overlay fallback): only the after-native-layer phase is supported;
+  <code>before_native_layer</code> raises <code>UnsupportedCapability</code>
+  (<code>FontLab.painter.before_native_layer</code>, R054). App wraps each paint body and
+  ends the painter, so a painter exception goes to the sink, not to Qt.</li>
+</ul>
+<p>Native canvas painters and tools (issue 201). <code>drawing.native_painters</code> keeps
+App's registry, poll and per-glyph maths, and attaches two native painters per
+glyph canvas: <code>UnderOwner</code> (Reporter <code>background</code>/<code>inactiveLayerBackground</code>,
+<code>DRAWBACKGROUND</code>) and <code>OverOwner</code> (foregrounds). FontLab owns the painter; a
+callback error goes to the sink. A <code>SelectTool</code> is registered with
+<code>registerPythonTool</code>; <code>plugins.tool_bridge</code> maps press/move/release/double-click
+to <code>mouseDown_</code>/<code>mouseDragged_</code> (button down) or <code>mouseMoved_</code>/<code>mouseUp_</code>/
+<code>mouseDoubleDown_</code>, sets <code>Glyphs.currentEvent()</code>, and gives
+<code>editViewController().graphicView()</code> with <code>activeLayer</code>, <code>scale</code>,
+<code>getActiveLocation_</code> and <code>convertPoint_fromView_</code>. Differences: a mouse event is
+claimed only when the plugin overrides the method; Glyphs' native select-tool
+behaviour (<code>objc.super(...).mouseDown_</code>) is a no-op; keys reach <code>keyDown_</code>/
+<code>keyUp_</code> but are never claimed, so FontLab shortcuts keep working; tools have
+no toolbar icon yet; the tool's foreground/background paint only while it is
+active. No bridge callback raises into FontLab: an error goes to the host sink
+and the callback returns False (events) or None (activation). A refused
+background falls back to an overlay with the R054 note, as for reporters.
+During the tool's own paint <code>editViewController()</code> is built from the paint
+context. <code>getActiveLocation_(None)</code> or a foreign event reads the live cursor;
+<code>convertPoint_fromView_</code> returns viewport points, y up. Native check (FontLab
+9.0.9802, HiDPI): event <code>localPos</code>, the painter device and the paint maths all
+use logical viewport pixels (device height 428 = viewport height, device pixel
+ratio 2, identity world transform).</p>
+<p>Triage gap fixes (issue 201). <code>GlyphsApp.plugins</code> re-exports the SDK's
+Foundation/AppKit/GlyphsApp names (<code>NSClassFromString</code>, <code>NSColor</code>, <code>Glyphs</code>,
+<code>objc</code>, ...) that glyport provides; names glyport lacks stay absent, so <code>import *</code>
+plugins fail at their first use. <code>ReporterPlugin.drawTextAtPoint</code> follows the SDK
+(screen-point size at any zoom, nine alignment names, errors logged; refusals
+still raise). <code>Foundation</code> adds <code>NSOffsetRect</code>/<code>NSPointInRect</code>; <code>GlyphsApp</code>
+adds <code>NSStr</code>. <code>tab.view().window().windowController().toolDrawDelegate()</code> and
+<code>.document()</code> resolve; FontLab's active tool is not readable, so the delegate
+always reports the select tool (<code>isKindOfClass_(GlyphsToolSelect)</code> is true,
+<code>dragging()</code> false). Anything beyond that chain (for example <code>view().frame()</code>)
+still refuses. A reporter's <code>graphicView().getActiveLocation_(event)</code> uses a tool
+event's point, else the live cursor mapped into the painted viewport;
+<code>Glyphs.currentEvent()</code> is the tool event being handled, else a synthetic event
+with the live <code>modifierFlags()</code> and the cursor in the active window's points,
+y up (no active window: screen points; FontLab has no Cocoa event). <code>NSClassFromString("GlyphsToolSelect")</code> resolves to a marker
+class, and <code>drawTextAtPoint</code> logs an unknown <code>align</code>. <code>NSContainsRect</code> is added; <code>NSScreen</code> reads QScreen geometry
+through the PythonQt property. Text field cells report <code>isScrollable</code> and accept
+<code>setScrollable_(True)</code> (a Qt line edit always scrolls; <code>False</code> on an edit field
+refuses). vanilla <code>Window._window</code> gives only <code>contentMinSize</code>/<code>contentMaxSize</code>.</p>
+<h2 id="status">Status</h2>
+<p>Implemented and verified (unreleased; details in CHANGELOG.md, evidence in the
+workspace <code>verification/issue-101-ecosystem/evidence/</code>):</p>
+<ul>
+<li>Read-only <code>inspect_source</code>/CLI assessment over all 253 corpus bundles; receipt
+  schema v1 and the typed error hierarchy (R015, R018).</li>
+<li>Glyphs 2 source adaptation into an owned cache with transformation IDs, hashes
+  and line/column source maps (R016/R017).</li>
+<li>Scoped execution contexts: import scoping, module restore, output routing,
+  callbacks and close hooks (R017).</li>
+<li>Live model first slice: probe-safe proxies, fake backend and the lazy FontLab
+  backend; native reads and native mutation (width, paths, anchors, nodes) pass in
+  an agent-owned FontLab session (R019–R022, partial).</li>
+<li>GlyphsApp host-services facade and FontLab GlyphsBridge: Output routing,
+  UPDATEINTERFACE timer, status notifications, AskString/Message; native timer,
+  redraw and close behaviour verified (R026, partial).</li>
+<li>Vanilla on Qt, slices 1–2: Window, FloatingWindow, Group, TextBox, EditText,
+  Button, CheckBox, PopUpButton, Slider, lines, RadioGroup, ComboBox, TextEditor,
+  Box, List and more, natively accepted on owned widgets (R028/R029, partial).</li>
+</ul>
+<p>Implemented facilities include <code>run_script</code>/<code>install_plugin</code>, the <code>verify</code> CLI,
+owned-font undo/redo and save/reopen, supported plugin protocols and Qt editor
+drawing hooks. Acceptance is specific to the retained tests and native receipts,
+not every source or protocol. Native Cocoa identity, scoped script/plugin imports
+and four distinct original script pilots through both Cocoa backends passed in
+FontLab 9.0.9783 at the preceding reviewed revision (76206df). The expanded script
+matrix, final integrated regression, installed-artifact acceptance and release
+checks remain outstanding. XIB/NIB translation remains incomplete.</p>
+<h3 id="cocoa-backend-selection">Cocoa backend selection</h3>
+<p><code>activate(cocoa_backend="auto")</code> prefers real PyObjC on macOS and Qt elsewhere.
+Use <code>activate(cocoa_backend="qt")</code> to force translation or <code>"native"</code> to require
+macOS/PyObjC (missing dependencies raise). Scoped <code>run_script</code> and
+<code>install_plugin</code> use <code>ExecutionOptions(cocoa_backend="native")</code> via <code>options=</code>.
+Handles and their contexts expose <code>cocoa_backend</code> and <code>cocoa_fallback_reason</code>;
+auto fallback reports why native imports were unavailable. All retained activation,
+script and plugin handles must use the same backend request (<code>auto</code>, <code>native</code> or
+<code>qt</code>). Close every retained handle and deactivate before changing that request,
+even when an <code>auto</code> fallback happened to select Qt. Matching requests share the retained selection, including an <code>auto</code> fallback;
+callbacks and unload hooks retain their chosen route until close. Conflicting
+requests fail before publishing aliases or caller globals. Existing foreign
+compatibility modules are refused.</p>
+<p>The optional <code>cocoa</code> extra supplies <code>pyobjc-framework-Cocoa</code> on macOS only.
+Install into your chosen Python environment yourself; Glyport never installs
+packages into FontLab. Native imports use the original <code>objc</code>, <code>Foundation</code>,
+<code>AppKit</code> and <code>Cocoa</code> modules, including lazy attributes and native class identity.
+Forced Qt temporarily masks preloaded PyObjC modules and restores them on close
+(or scope exit). Native modules are never given Qt names or loader metadata.</p>
+<p>GlyphsApp models remain FontLab-backed; vanilla, menus, plugin hooks and drawing
+bridges remain Qt-backed. Native NSView/NSColor objects are not automatically
+converted to PythonQt widgets/colors: mixing them at those UI boundaries is
+unsupported. Choose Qt for scripts requiring those bridges. Glyport starts no
+NSApplication, QApplication or application-wide event loop. Close script-owned
+native windows explicitly; Qt resource tracking does not own Cocoa windows.</p>
+<h2 id="issue120-p2-parseable-legacy-apis">Issue120 P2: parseable legacy APIs</h2>
+<p>For a selected Glyphs2 route, otherwise Python3-parseable <code>.iteritems</code>,
+<code>.iterkeys</code>, <code>.itervalues</code> and <code>.has_key</code> attribute loads now receive a tracked
+source wrapper. Existing attributes are returned first, preserving native/custom
+methods and descriptor failures. Only missing operations on a real dictionary
+or dictionary class receive fallback behavior. Iteration is live; inherited
+dictionary operations do not dispatch through an overridden modern items/keys/
+values method. Receivers evaluate once and original arguments/errors propagate.</p>
+<p>The execution scope adds Python2 aliases to its own builtins copy. It preserves
+normal module/local/closure lookup, explicit user bindings, existing import/open
+routing and Python's global builtins. Imported owned helpers receive that same
+legacy scope. <code>adapt_source(...).compile()</code> is a compiler API; plain external
+exec needs appropriate builtins, as before. Prefer the public run_script API.</p>
+<p>Explicit Glyphs3/4 and unresolved auto profile behavior remains unchanged. A
+real declared/selected Glyphs2 auto route receives the new behavior; no generation
+is guessed from an arbitrary attribute name. Existing Python2-syntax conversion
+remains on its prior fissix path and retains its semantic-review diagnostics.
+This change does not claim a complete Python2 interpreter or new model/GUI APIs.</p>
+<p>Generated helpers use a reserved name, diagnosed before cache publication on
+source reference/binding conflicts. Original bytes/comments, encodings, f-string
+syntax and source-map provenance remain retained. The pipeline version changes
+the cache identity; old cached sources are not reused. Four real priority sources
+were transformed/parsed only; none was compiled into executable code or run.
+Their whole FontLab selection/UI/metrics/geometry workflows still require native
+installed-artifact qualification through the dedicated owned-fixture runner.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+          <div class="md-top" data-md-component="top" hidden>
+  <div class="md-top__center">
+    <button type="button" class="md-top__button md-top__button--main" data-md-action="top">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+      <span>Back to top</span>
+    </button>
+    
+      
+      
+      <label class="md-top__button md-top__side md-top__side--nav" for="__drawer" >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-panel-left" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/></svg>
+      </label>
+    
+    
+      
+      
+      <label class="md-top__button md-top__side md-top__side--toc" for="__toc" >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-panel-right" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M15 3v18"/></svg>
+      </label>
+    
+  </div>
+</div>
+      </main>
+      
+  
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://jaywhj.github.io/mkdocs-materialx/" target="_blank" rel="noopener">
+      MaterialX
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+  <fontlab-footer mode="light"></fontlab-footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "code": null, "features": ["search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "code.collapse": "Collapse", "code.download": "Download", "code.expand": "Expand remaining # lines", "code.select": "Toggle line selection", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fc193f93.min.js"></script>
+      
+        <script src="https://i.fontlab.com/fltheme26/1.0.0/basecoat.js"></script>
+      
+        <script src="https://i.fontlab.com/fltheme26/1.0.0/theme.js"></script>
+      
+    
+  </body>
+</html>

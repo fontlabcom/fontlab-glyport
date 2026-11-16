@@ -1,0 +1,11 @@
+{
+ "source_commit": "25e0e0ea22d1ce8e876b1565523093113d02d81f",
+ "original_manifest_sha256": "2f67f8b0c6ddc0f1251c0aae448ec02b195f95eacdeae9ecedc256a93c3e405a",
+ "scrubbed_manifest_sha256": "fabe36593ec5a05b2c539591ef9e9f7ced5856f52ebc621138b1d520b6212658",
+ "targets_sha256": "591a32e48ac92a305959e082abc4a796ab6584e6ae85ec35543b057403d11f55",
+ "changed_fields": [
+  "corpus",
+  "selection_parameters.vocabulary"
+ ],
+ "derivation": "Only two private provenance locations replaced with logical source identifiers; all other fields unchanged."
+}
