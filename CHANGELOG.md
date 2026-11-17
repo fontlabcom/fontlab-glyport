@@ -2,6 +2,13 @@
 this_file: CHANGELOG.md
 ---
 
+## 2026-11-17 — Installer stub from instamix 1.0.15 (Issue 259 follow-ups)
+
+- `install.vfpy` is now the stub from fontlab-python-instamix 1.0.15. It replaces an
+  installed instamix older than 1.0.13 and puts the old copy back if the upgrade
+  fails; linked checkouts and local builds are kept. A download that fails for
+  lack of root certificates (FontLab 9 for macOS) is retried with the system curl.
+
 ## 2026-11-17 — Task-list cleanup (Issue 258)
 
 - Closed and removed from TODO: shared-installer qualification rows (install.vfpy is the fontlab-instamix stub since 1.2.10, CHANGELOG 1.2.10 entry; CI green at `80d3012`, v1.2.11); C13-55/56 docs relocation (delivery source `ab0269cc`, CI 43567583082); C13-50 historical stages (superseded by later full-source receipts); the Ruff finding set in `tests/test_cli_edges.py` (I001, PLW1510) was already fixed in `ed7ecf0`: Ruff 0.16.7 and 0.14.10 pass the file and its 17 tests pass.
