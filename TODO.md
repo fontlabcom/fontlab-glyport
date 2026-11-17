@@ -15,6 +15,7 @@ this_file: TODO.md
 - [ ] Reconcile the dated 94-diagnostic lint audit and currently failing unversioned recipe (Homebrew Ruff 0.14.10, exact same 94 diagnostics) with passing explicit Ruff 0.16.7. Preserve all failed receipts and historical tool-identity limits; this test-only change repairs no production lint issue.
 - [ ] Qualify the full lawful Fly provider cohort and complete current consumers; bounded detached aliases/demos do not establish closure, and excluded providers must not be fabricated or accessed.
 - [ ] Complete the authorized root installer and verify each installed package, Script and Extension origin/completion separately, then qualify every native GUI/control/theme/history/Undo/Redo/save-reopen row through the serialized host lane; retain all 17 workspace native rows.
+- [ ] Advance current-layer, Glyph Info and resource/dialog fixes with matching App/Pens consumers and focused regressions before the full native ownership and preservation pass.
 
 - [ ] Issue 255: After explicit D43 recovery and admission, qualify launcher source selection, retained failed/live-handle refusal, cancellation and PythonQt dialogs on the released installed tuple; retain complete original native workflows and provider-cache ownership safeguards.
 

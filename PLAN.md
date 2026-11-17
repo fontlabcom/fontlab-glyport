@@ -11,6 +11,11 @@ Review the exact shared-installer candidate against fresh main, run the required
 # Forward plan
 
 Keep the accepted release audit's native-driver coverage gaps (0–50.98%), incomplete full Fly provider closure, installed GUI/theme/history/save-reopen checks and root installer completion open. The dated 94-diagnostic lint failure remains evidence; the current explicitly identified Ruff 0.16.7 required-scope gate passes without production/configuration changes. The unversioned recipe currently selects Homebrew Ruff 0.14.10 and reproduces the exact 94-finding output. Reconcile command selection and historical tool identity separately from this test repair; retain the recipe failure. Preserve every original acceptance row, Issue 123 pause and private Pages hold.
+## Functional work order — 2026-11-14
+
+Prioritize current-layer identity, Glyph Info behavior and usable resource/dialog lifetimes in maintained consumers. Reconcile App ownership and shared Pens adapters with the actual foreground-layer model; keep paused branches and unproved native behavior separate.
+
+Use small smoke checks and focused regressions for changed behavior and package boundaries. Keep the existing detailed acceptance tasks for a later testing pass; mandatory delivery hooks and current holds remain in force.
 
 Issue 230 reconciliation is current. Issue 123 implementation remains paused; its acceptance backlog below is preserved, not resumed. Keep qualified Issue 207 candidates distinct from canonical source, ordinary installed artifacts, native acceptance and publication. Issue 210 defines the future plugin split; Issue 211 retains follow-up checks. The owner corrected the preparation catalogue reference to Issue 214.
 

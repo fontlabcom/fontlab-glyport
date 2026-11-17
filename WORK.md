@@ -5,6 +5,13 @@ this_file: WORK.md
 ## 2026-11-15 — Shared installer source alignment
 
 Copied the reviewed shared installer exactly: dependency constraints and managed origins remain protected; inactive conditional dependencies are filtered before sibling execution in the resolver target Python. FontLab imports remain standard-library-only. Package identity, runtime APIs, dependency declarations, scripts, bundles and legal files are unchanged. The real source-archive check now includes the exact root installer; the prior omission was reproduced before the single allowlist addition.
+## 2026-11-14 — Functional work order documented
+
+Updated AGENTS, PLAN and TODO to prioritize useful functional changes and compatible package boundaries, with detailed testing deferred. Existing backlog and prior records are retained. Documentation preservation and policy consistency were checked; no runtime, installed or native checks ran in this documentation-only pass.
+
+Next: advance current-layer, Glyph Info and resource/dialog fixes with matching App/Pens consumers and focused regressions before the full native ownership and preservation pass.
+
+[fontlab-glyport v1.2.8](https://github.com/fontlabcom/fontlab-glyport/releases/tag/v1.2.8) is qualified at `7404fe26629701dcf7a2e91f3ca83bd6b88d8a42`.
 
 Focused checks: 6 passed in 1.00s. This qualifies the local source candidate only. Independent review, combined-main/full delivery gates, genuine release/downloads, installed provider closure and admitted FontLab/native workflows remain separate. No owner-folder installation or native operation ran.
 

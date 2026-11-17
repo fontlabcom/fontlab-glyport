@@ -35,6 +35,10 @@ Focused checks: 6 passed in 1.00s. This qualifies the local source candidate onl
 - All 37 locked Python 3.13 documentation tests pass. Strict rebuilding at current source HEAD's epoch preserves all 62 output hashes and modes. Additional explicit Ruff 0.16.7 checks pass on src/tests/native-drivers and the changed test; the required unversioned gate remains failed because the recipe selects Homebrew Ruff 0.14.10 and reproduces the historical 94-finding output exactly. Both results and the old failed receipts remain; this test-only change repairs no production lint issue.
 - One complete arm64 Python 3.11 source run passes 7,498 tests with the same six existing skips and identical ordered 7,504 IDs as the accepted audit. No fixture-driven unskip or skip-policy change occurred. Source editables do not qualify ordinary installation or native behavior.
 - Independent review, fresh-main combined qualification, actual hook/main/CI delivery, release and installation remain pending. Complete native-driver coverage, full provider/consumer closure and all installed/native workflow gates remain open. Issue 123 stays paused and private Pages operations stay held.
+## 2026-11-14 — Functional work order documented
+
+- Added the owner's functional-progress-first guidance and repository-specific priorities, including cross-package compatibility and a later detailed testing pass. Existing mandatory hooks, holds and unfinished work remain in force.
+- This change updates guidance and planning only; it establishes no new runtime, installed, native or release result.
 
 ## 2026-11-13 — Issue 255 verified release qualification
 
