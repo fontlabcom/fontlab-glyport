@@ -2,15 +2,6 @@
 this_file: PLAN.md
 ---
 
-## Shared installer: remaining delivery qualification — 2026-11-15
-
-Review the exact shared-installer candidate against fresh main, run the required combined package gates, and qualify genuine release/archive/download inputs. Preserve the existing package-specific dependency and distribution contracts. Then qualify the coherent provider/consumer and Script/Extension cohort through the admitted root installer and native lane; source checks do not establish those outcomes. Keep every existing ownership, native, publication and paused-work limit.
-
-
-
-# Forward plan
-
-Keep the accepted release audit's native-driver coverage gaps (0–50.98%), incomplete full Fly provider closure, installed GUI/theme/history/save-reopen checks and root installer completion open. The dated 94-diagnostic lint failure remains evidence; the current explicitly identified Ruff 0.16.7 required-scope gate passes without production/configuration changes. The unversioned recipe currently selects Homebrew Ruff 0.14.10 and reproduces the exact 94-finding output. Reconcile command selection and historical tool identity separately from this test repair; retain the recipe failure. Preserve every original acceptance row, Issue 123 pause and private Pages hold.
 ## Functional work order — 2026-11-14
 
 Prioritize current-layer identity, Glyph Info behavior and usable resource/dialog lifetimes in maintained consumers. Reconcile App ownership and shared Pens adapters with the actual foreground-layer model; keep paused branches and unproved native behavior separate.
