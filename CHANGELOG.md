@@ -6,7 +6,7 @@ this_file: CHANGELOG.md
 
 - Closed and removed from TODO: shared-installer qualification rows (install.vfpy is the fontlab-instamix stub since 1.2.10, CHANGELOG 1.2.10 entry; CI green at `80d3012`, v1.2.11); C13-55/56 docs relocation (delivery source `ab0269cc`, CI 43567583082); C13-50 historical stages (superseded by later full-source receipts); the Ruff finding set in `tests/test_cli_edges.py` (I001, PLW1510) was already fixed in `ed7ecf0`: Ruff 0.16.7 and 0.14.10 pass the file and its 17 tests pass.
 - Removed as obsolete: C13-01/03/04 boilerplate, artifact and Echopy refresh chains (C13-07/08/10/11/12/15/45/47), frozen-corpus and 32-target matrices (C13-33/34). Paused Issue 123 rows C13-13/16/54 retained.
-- The Release workflow run at `80d3012`'s successor `458714e` (PyPI trusted publishing) reports failure for the unregistered publisher; tracked with the Issue 256 publisher list.
+- Open: the Release workflow at `80d3012` concluded failure; cause not investigated in this cleanup (the Issue 256 list names four PyPI publisher gaps, not including Glyport).
 
 ## 1.2.10 (2026-11-16)
 
