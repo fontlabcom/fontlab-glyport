@@ -32,10 +32,10 @@ fi
 match='v[0-9]*.[0-9]*.[0-9]*'
 TAG="$(git describe --tags --exact-match --match "$match" HEAD 2>/dev/null || true)"
 if [[ -n "$TAG" && -z "$(git status --porcelain --untracked-files=all)" ]]; then
-  echo "HEAD is already $TAG; pushing it"
-  git push -q --atomic origin HEAD "refs/tags/$TAG"
+  echo "HEAD is already $TAG"
 else
-  args=(--pull=False --bump="$BUMP")
+  # Push below, not inside gitnextver, so pre-push hooks show their output.
+  args=(--pull=False --push=False --bump="$BUMP")
   # gitnextver refuses --commit=False on a tree with any change, untracked included.
   if [[ -z "$(git status --porcelain --untracked-files=all)" ]]; then args+=(--commit=False); fi
   uvx gitnextver "${args[@]}"
@@ -45,6 +45,9 @@ if [[ ! "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
   echo "error: no vX.Y.Z tag on HEAD after gitnextver" >&2
   exit 1
 fi
+
+echo "Pushing $TAG (pre-push hooks run now and may take a while)"
+git push --atomic origin HEAD "refs/tags/$TAG"
 
 echo "Released $TAG"
 ./build.sh
