@@ -2,6 +2,13 @@
 this_file: PLAN.md
 ---
 
+## Issue 271 installer qualification
+
+Integrate the independently reviewed generated installer through existing full
+repository/hook gates; verify exact-SHA CI and archives, then qualify native
+macOS/Windows use when the serialized guard is available. Preserve owner files.
+
+
 ## Functional work order — 2026-11-14
 
 Prioritize current-layer identity, Glyph Info behavior and usable resource/dialog lifetimes in maintained consumers. Reconcile App ownership and shared Pens adapters with the actual foreground-layer model; keep paused branches and unproved native behavior separate.

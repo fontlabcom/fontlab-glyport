@@ -9,6 +9,8 @@ Run supported Glyphs scripts and plugins in FontLab with the `fontlab_glyport` P
 
 ## Install
 
+Open `install.vfpy` in FontLab 9 and restart; it runs [fontlab-instamix](https://github.com/fontlabcom/fontlab-python-instamix) (fetched from PyPI if missing) for extension `com.fontlab.glyport`.
+
 Host code targets Python 3.11 arm64; metadata permits Python 3.11+ externally. A terminal environment is not visible in FontLab.
 
 Install the Glyport distribution and its matching reviewed App wheel with uv into the selected interpreter. Editable installation into FontLab is owner-managed.
